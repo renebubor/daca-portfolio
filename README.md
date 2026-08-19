@@ -1,7 +1,7 @@
-# DACA Portfoolio -- [Rene Bubõr]
+# DACA Portfoolio -- Rene Bubõr
 
 ## Minust
-[Liitusin DACA programmiga, et saada juurde uusi teadmisi andmeanalüüsi vallas ja jagada oma teadmisi ka teistele]
+Liitusin DACA programmiga, et saada juurde uusi teadmisi andmeanalüüsi vallas ja jagada oma teadmisi ka teistele
 
 ## Eesmärk
 Õppida andmeanalüüsi -- SQL, Python, visualiseerimine -- ja ehitada professionaalne portfoolio.
