@@ -6,7 +6,7 @@
  
 ## Kirjeldus
  
-See repositoorium sisaldab minu DACA õppeprojekte ja portfoolio.
+See repositoorium sisaldab minu DACA õppeprojekte ja portfooliot.
  
 ## Projektid
  
@@ -31,7 +31,7 @@ See repositoorium sisaldab minu DACA õppeprojekte ja portfoolio.
 - **Visualiseerimine:** Power BI / Streamlit (tulemas...)
 - **Tööriistad:** Git, GitHub, VS Code
  
-## Kontaktc
+## Kontakt
  
 - **GitHub:** [github.com/renebubor](https://github.com/renebubor)
 - **Email:** rene.bubor@gmail.com
