@@ -33,6 +33,6 @@ See repositoorium sisaldab minu DACA õppeprojekte ja portfooliot.
  
 ## Kontakt
  
-- **GitHub:** [github.com/renebubor](https://github.com/renebubor)
+- **GitHub:** [github.com/renebubor](https://github.com/renebubor/daca-portfolio)
 - **Email:** rene.bubor@gmail.com
 
