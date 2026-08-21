@@ -15,5 +15,5 @@
 - `Tln_müük.png` -- tulemuste pilt
 
 ## Meeskonna töö
-- [Link meeskonna Data Landscape slaidile]
+- https://github.com/laura-johanson/urbanstyle-marketing-data/blob/a7baebb0cd97b02d736adce4ebacaac81554a3de/week%201
 
