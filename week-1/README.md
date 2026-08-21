@@ -23,7 +23,7 @@ Analüüs sisaldas:
 `SELECT`, `WHERE`, `ORDER BY`, `DISTINCT`, `COUNT` ja `GROUP BY`.
 
 ## Failid
-- `week1_sales.sql` -- minu SQL päringud
+- `week1_sales_exploration.sql` -- minu SQL päringud
 - `asukoht_tehingud_päring.png` -- päringu tulemus
 - `Tln_müük.png` -- päringu tulemus
 
