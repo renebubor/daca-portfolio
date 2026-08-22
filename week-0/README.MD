@@ -307,13 +307,12 @@ week-0/
 
 ### Individuaalne töö
 
-`individual/setup_screenshot.png`  
+[`individual/setup_screenshot.png`](individual/setup_screenshot.png) 
 Week 0 keskkonna seadistamise ekraanipilt.
 
 ### Meeskonnatöö
 
-`team/week0_team_summary.md`  
-Kokkuvõte ja viide meeskonna ühisele Week 0 tööle.
+[`meeskonna töö viide week-0`](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/f0f614533c8ed373a3f82aa2332dfdbc6509f5e0/week%200)
 
 
  
