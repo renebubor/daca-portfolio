@@ -174,6 +174,7 @@ SQL päringud koos kommentaaridega, mida kasutasin `sales` tabeli uurimiseks.
 
 [`individual/asukoht_tehingud_päring.png`](individual/asukoht_tehingud_päring.png)  
 Ekraanipilt SQL päringu tulemusest kus on poodide asukohad ja neis tehtavate tehingute arv.
+
 [`individual/Tln_müük.png`](individual/Tln_müük.png)  
 Ekraanipilt SQL päringu tulemusest kus poe asukoht on Tallinn ja tehingu summa on suurem kui 100 eurot.
 
@@ -187,7 +188,7 @@ Minu panus meeskonnatöösse oli `sales` tabeli analüüs.
 Kokkuvõte ja viide meeskonna ühisele Week-1 tööle.
 
 **Meeskonna ühine töö:**  
-https://github.com/laura-johanson/urbanstyle-marketing-data/blob/a7baebb0cd97b02d736adce4ebacaac81554a3de/week%201
+[`meeskonna töö viide week-1`](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/a7baebb0cd97b02d736adce4ebacaac81554a3de/week%201)
 
 ---
 
