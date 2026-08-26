@@ -10,8 +10,8 @@ Liitusin DACA programmiga, et saada juurde uusi teadmisi andmeanalüüsi vallas 
 | Nädal | Teema | Staatus |
 |-------|-------|---------|
 | 0 | Onboarding | Lõpetatud |
-| 1 | SQL Basics | Käimas |
-| 2 | SQL Cleaning | Tulemas |
+| 1 | SQL Basics | Lõpetatud |
+| 2 | SQL Cleaning | Käimas |
 | 3 | SQL JOINs | Tulemas |
 | 4 | SQL Aggregation | Tulemas |
 | 5-6 | Visualiseerimine | Tulemas |
