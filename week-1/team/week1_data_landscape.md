@@ -5,7 +5,7 @@ sales, customers ja products tabeleid.
 
 ## Minu panus
 
-Minu vastutus oli sales tabeli analüüs.
+Minu ülesanne oli sales tabeli analüüs.
 
 ## Meeskonna ühine väljund
-https://github.com/laura-johanson/urbanstyle-marketing-data/blob/f0f614533c8ed373a3f82aa2332dfdbc6509f5e0/week%201
+https://github.com/laura-johanson/urbanstyle-marketing-data/tree/6800d299dba83cc32a8f5cb7a5fc10cbb1634ca2/week1
