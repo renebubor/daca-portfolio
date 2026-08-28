@@ -99,3 +99,23 @@ SELECT phone,
 FROM customers_test
 WHERE phone IS NOT NULL
 LIMIT 10;
+-----
+--omapoolne lisauurimine
+-- Lojaalsustasemete NULL arv
+SELECT COUNT(*) FILTER (
+        WHERE loyalty_tier IS NULL
+            OR TRIM(loyalty_tier) = ''
+    ) AS null_loyalty_tier
+FROM customers_test;
+-- kokku 1260 puuduvat taset
+--duplikaatide tabel kõrvutatuna emailide alusel, et saaks hinnata millised read on tõelised duplikaadid
+SELECT *
+FROM customers_test
+WHERE email IN (
+        SELECT email
+        FROM customers_test
+        WHERE email IS NOT NULL
+        GROUP BY email
+        HAVING COUNT(*) > 1
+    )
+ORDER BY email;
