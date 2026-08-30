@@ -17,4 +17,3 @@ Liitusin DACA programmiga, et saada juurde uusi teadmisi andmeanalüüsi vallas 
 | 5-6 | Visualiseerimine | Tulemas |
 | 7-8 | Python | Tulemas |
 | 9-10 | Portfoolio + Karjäär | Tulemas |
-
