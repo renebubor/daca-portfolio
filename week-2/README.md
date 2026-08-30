@@ -296,7 +296,7 @@ Minu individuaalse analüüsi tulemused olid sisendiks meeskonna ühisele tööl
 Kokkuvõte ja viide meeskonna ühisele Week 2 tööle.
 
 **Meeskonna ühine töö:**  
-https://github.com/laura-johanson/urbanstyle-marketing-data/tree/9eaa9b8820ee04cffe97bdfdcb1c90c8220ad10a/week2
+[`meeskonna töö viide week-2`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/9eaa9b8820ee04cffe97bdfdcb1c90c8220ad10a/week2)
 
 ---
 
