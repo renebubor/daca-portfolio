@@ -32,6 +32,32 @@ FROM(
     );
 /*Kui tühjad väljad välistada siis jääb 128 e-maili, millel on lisaks 130 duplikaati. (e-maile ja nende duplikaate on kokku 258 kirjet). 
  kustutada tuleb 130 duplikaati.*/
+--eemaldamist vajavate e-mail ridade päring
+SELECT SUM(koopiate_arv - 1) AS eemaldatavaid_ridu
+FROM (
+        SELECT email,
+            COUNT(*) AS koopiate_arv
+        FROM customers_test
+        WHERE email IS NOT NULL
+        GROUP BY email
+        HAVING COUNT(*) > 1
+    );
+-- Eemaldame e-maili duplikaadid
+-- Alles jääb väikseima customer_id-ga rida
+DELETE FROM customers_test
+WHERE customer_id IN (
+        SELECT customer_id
+        FROM (
+                SELECT customer_id,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY email
+                        ORDER BY customer_id
+                    ) AS rownumber
+                FROM customers_test
+                WHERE email IS NOT NULL
+            ) AS duplikaadid
+        WHERE rownumber > 1
+    );
 --3. Leian puuduvad nimed
 SELECT COUNT(*) FILTER (
         WHERE first_name IS NULL
@@ -56,6 +82,10 @@ FROM (
 SELECT count(distinct initcap(trim(city))) AS linnad_tegelik_arv
 FROM customers_test;
 --Erinevaid linnu on kokku 12
+--Linnanimede normaliseerimine
+UPDATE customers_test
+SET city = INITCAP(TRIM(LOWER(city)))
+WHERE city IS NOT NULL;
 --5.Kontrollida kontaktandmeid — puuduvad telefoninumbrid ja e-mailid:
 SELECT COUNT(*) FILTER (
         WHERE phone IS NULL
