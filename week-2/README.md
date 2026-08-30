@@ -272,7 +272,7 @@ week-2/
 ├── README.md
 │
 ├── individual/
-│   ├── ek2_customers_cleaning.sql
+│   ├── week2_customers_cleaning.sql
 │   ├── week2_customers_report.md
 │   ├── customers_puhastamisraport.png
 │   └── cleaning_log.md
@@ -283,7 +283,7 @@ week-2/
 
 ### Individuaalne töö
 
-[`individual/week2_cu cleaning.sql`](individual/week2_sql_cleaning.sql)  
+[`individual/week2_customers_cleaning.sql'](individual/week2_customers_cleaning.sql)  
 SQL päringud koos kommentaaridega, mida kasutasin andmekvaliteedi uurimiseks ja andmete puhastamiseks.
 
 ### Meeskonnatöö
@@ -292,11 +292,11 @@ Meeskonnatöö käigus ühendati individuaalsete analüüside tulemused ning koo
 
 Minu individuaalse analüüsi tulemused olid sisendiks meeskonna ühisele tööle.
 
-[`team/week2_team_summary.md`](team/week2_team_summary.md)  
+[`team/week2_team_cleaning_report.md'](team/week2_team_cleaning_report.md)  
 Kokkuvõte ja viide meeskonna ühisele Week 2 tööle.
 
 **Meeskonna ühine töö:**  
-[Lisa siia meeskonna GitHubi / Google Slides / ühise dokumendi link]
+https://github.com/laura-johanson/urbanstyle-marketing-data/tree/9eaa9b8820ee04cffe97bdfdcb1c90c8220ad10a/week2
 
 ---
 
