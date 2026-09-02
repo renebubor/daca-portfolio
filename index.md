@@ -26,6 +26,11 @@ SQL puhastusoperatsioonide läbiviimine.
 
 [Vaata Week 2 →](week-2/)
 
+### Week 3 - SQL JOINs
+SQL andmete omavaheline sidumine.
+
+[Vaata Week 3 →](week-3/)
+
 ## Nädalapõhine õppeplaan
 
 | Nädal | Teema | Staatus |
