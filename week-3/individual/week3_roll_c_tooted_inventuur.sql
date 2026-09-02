@@ -9,7 +9,7 @@ SELECT p.product_name,
 FROM products p
     LEFT JOIN sales s ON p.product_id = s.product_id
 WHERE s.sale_id IS NULL;
--- Kui sale_id on NULL, siis toodet pole kunagi müüdud! Päring andis 12 realise nimekirja
+-- Kui sale_id on NULL, siis toodet pole kunagi müüdud!
 --2. Loendan müümata tooted kokku:
 SELECT COUNT(*) AS müümata_tooteid
 FROM products p
@@ -52,10 +52,8 @@ SELECT p.product_name,
 FROM products p
     LEFT JOIN inventory i ON p.product_id = i.product_id
 ORDER BY i.quantity_available ASC;
-select *
-from inventory;
 -----
---Ühendan kolm tabelit: leian tooted, mis on laos, aga pole kunagi müüdud — topelt kahju (laoseis + müümata):
+--Ühendan kolm tabelit: leian tooted, mis on laos, aga pole kunagi müüdud — topelt kahju (laoseis + müümata)
 SELECT p.product_name,
     p.category,
     p.retail_price,
@@ -67,3 +65,4 @@ FROM products p
 WHERE s.sale_id IS NULL
     AND i.quantity_available > 0
 ORDER BY kinni_olev_raha DESC;
+--päring annab vastuseks, et andmed puuduvad
