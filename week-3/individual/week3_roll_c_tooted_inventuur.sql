@@ -67,6 +67,6 @@ WHERE s.sale_id IS NULL
 ORDER BY kinni_olev_raha DESC;
 --päring annab vastuseks, et andmed puuduvad
 --Leian kui palju on raha laovarude all kinni: 44 212 904 EUR
-select sum(p.cost_price * i.quantity_available) AS laovarude_maksumus
-from products p
-    inner join inventory i on p.product_id = i.product_id;
+SELECT sum(p.cost_price * i.quantity_available) AS laovarude_maksumus
+FROM products p
+    INNER JOIN inventory i ON p.product_id = i.product_id;
