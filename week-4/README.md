@@ -392,19 +392,19 @@ week-4/
 
 **Müügi koondandmed**
 
-['week4_sales_aggregation.sql'](individual/week4_sales_aggregation.sql)
+['individual/week4_sales_aggregation.sql'](individual/week4_sales_aggregation.sql)
 
 SQL-päringud koos kommentaaridega müügi kuupõhise, kategooriapõhise ja trendianalüüsi kohta.
 
 Analüüsi tulemused:
 
-['UrbanStyle_käive.png'](individual/UrbanStyle_käive.png)
+['individual/UrbanStyle_käive.png'](individual/UrbanStyle_käive.png)
 
 ### Individuaalne töö — Roll D
 
 **Turunduskanalite efektiivsus**
 
-['week4_marketing_aggregation.sql'](individual/week4_marketing_aggregation.sql)
+['individual/week4_marketing_aggregation.sql'](individual/week4_marketing_aggregation.sql)
 
 SQL-päringud koos kommentaaridega turunduskanalite koondnäitajate, efektiivsuse ja kuiste trendide analüüsimiseks.
 
@@ -426,10 +426,10 @@ Minu panus meeskonnatöösse oli:
 **Roll A — müügi koondandmed**  
 **Roll D — turunduskanalite efektiivsus**
 
-[(https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4)]
+['team/week4.md'](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4)
 
 **Meeskonna ühine töö:**  
-[(https://github.com/laura-johanson/urbanstyle-marketing-data/blob/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4/teamwork.md)]
+[`meeskonna töö viide week-4`](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4/teamwork.md)
 
 ---
 

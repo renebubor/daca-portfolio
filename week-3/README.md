@@ -280,7 +280,7 @@ Minu panus meeskonnatöösse oli **Roll C — toodete, müügi ja inventuuri ana
 Week 3 meeskonnatöö kokkuvõte.
 
 **Meeskonna ühine töö:**
-[(https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week3)]
+[`meeskonna töö viide week-3`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week3)
 
 ---
 
