@@ -10,7 +10,7 @@ GROUP BY DATE_TRUNC('month', sale_date)
 ORDER BY kuu;
 --2.Müük kategooriate kaupa
 SELECT p.category,
-    SUM(s.quantity) AS toodete_arv,
+    COUNT(DISTINCT p.product_id) AS toodete_arv,
     SUM(s.total_price) AS kogumüük,
     ROUND(AVG(s.total_price), 2) AS keskmine_hind
 FROM sales s
