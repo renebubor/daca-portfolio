@@ -160,7 +160,7 @@ SQL-päringute tulemused on dokumenteeritud eraldi ekraanipiltidena.
 
 ### Enim müüdud tooted
 
-[`individual/enim_müüdud_tooted.png`](individual/enim_müüdud_tooted.png)
+[`individual/enim_müüdud_tooted.png`](individual/enimmüüdud_tooted.png)
 
 Ülevaade toodetest, mida müüdi analüüsitavas andmestikus kõige rohkem.
 
@@ -265,7 +265,7 @@ Minu Roll C SQL-päringud toodete, müügi ja inventuuri analüüsimiseks.
 
 Analüüsi tulemused:
 
-- [`enim_müüdud_tooted.png`](individual/enim_müüdud_tooted.png)
+- [`enim_müüdud_tooted.png`](individual/enimmüüdud_tooted.png)
 - [`müük_kategooriate_kaupa.png`](individual/müük_kategooriate_kaupa.png)
 - [`müümata_tooted.png`](individual/müümata_tooted.png)
 - [`lao_väljavõte.png`](individual/lao_väljavõte.png)
@@ -280,7 +280,7 @@ Minu panus meeskonnatöösse oli **Roll C — toodete, müügi ja inventuuri ana
 Week 3 meeskonnatöö kokkuvõte.
 
 **Meeskonna ühine töö:**
-(https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week3)
+[(https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week3)]
 
 ---
 
