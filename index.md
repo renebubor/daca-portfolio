@@ -31,6 +31,11 @@ SQL andmete omavaheline sidumine.
 
 [Vaata Week 3 →](week-3/)
 
+### Week 4 - SQL Aggregation
+SQL andmete agregeerimine ja koondanalüüs.
+
+[Vaata Week 4 →](week-4/)
+
 ## Nädalapõhine õppeplaan
 
 | Nädal | Teema | Staatus |
@@ -38,8 +43,8 @@ SQL andmete omavaheline sidumine.
 | 0 | Onboarding | Lõpetatud |
 | 1 | SQL Basics | Lõpetatud |
 | 2 | SQL Cleaning | Lõpetatud |
-| 3 | SQL JOINs | Käimas |
-| 4 | SQL Aggregation | Tulemas |
+| 3 | SQL JOINs | Lõpetatud |
+| 4 | SQL Aggregation | Käimas |
 | 5-6 | Visualiseerimine | Tulemas |
 | 7-8 | Python | Tulemas |
 | 9-10 | Portfoolio + Karjäär | Tulemas |
