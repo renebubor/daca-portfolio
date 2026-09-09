@@ -11,7 +11,8 @@ UrbanStyle'i andmebaasis paiknevad kliendi-, müügi- ja tooteandmed eraldi tabe
 
 * `customers` — kliendi nimi, e-post, linn ja muud kliendiandmed;
 * `sales` — müügitehingud, kuupäevad, kogused ja summad;
-* `products` — toodete nimed, kategooriad ja hinnad.
+* `products` — toodete nimed, kategooriad ja hinnad;
+* `inventory` — toodete laoseisud.
 
 JOIN-ide abil saab need andmed omavahel siduda ning vastata näiteks küsimustele:
 
@@ -21,6 +22,7 @@ JOIN-ide abil saab need andmed omavahel siduda ning vastata näiteks küsimustel
 * Millised kliendid pole kunagi ostnud?
 * Milliseid tooteid pole kunagi müüdud?
 * Millised tootekategooriad müüvad erinevates linnades kõige rohkem?
+* millised on toodete laoseisud?
 
 ---
 
@@ -51,200 +53,134 @@ customers
     │ product_id
     ▼
  products
+    │
+    │ product_id
+    ▼
+inventory
 ```
+`sales` tabel seob müügitehingu kliendi ja tootega ning `inventory` võimaldab lisada analüüsi toodete laoseisu.
 
-Näiteks:
+Selline tabelite ülesehitus võimaldab hoida erinevat tüüpi andmed eraldi, kuid JOIN-ide abil saab need analüüsi jaoks uuesti tervikuks ühendada.
 
-* `customers.customer_id` identifitseerib kliendi;
-* `sales.customer_id` viitab vastavale kliendile;
-* `products.product_id` identifitseerib toote;
-* `sales.product_id` viitab müüdud tootele.
+---
 
-Seega toimib `sales` tabel olulise ühenduspunktina kliendi- ja tooteandmete vahel.
+## Õpitud SQL käsud ja konstruktsioonid
+
+Week 3 jooksul õppisin kasutama SQL JOIN-e ning kombineerima neid varasematel nädalatel õpitud käskude ja funktsioonidega.
+
+| SQL käsk / konstruktsioon | Eesmärk |
+|---|---|
+| `INNER JOIN` | Mõlemas tabelis sobivate kirjete ühendamine |
+| `LEFT JOIN` | Kõigi vasaku tabeli kirjete säilitamine |
+| `RIGHT JOIN` | Kõigi parema tabeli kirjete säilitamine |
+| `ON` | Tabelite ühendamise tingimuse määramine |
+| `AS` | Tabelite ja veergude aliased |
+| `WHERE ... IS NULL` | Teises tabelis vasteta kirjete leidmine |
+| `GROUP BY` | Ühendatud andmete grupeerimine |
+| `COUNT()` | Kirjete või müükide loendamine |
+| `SUM()` | Müügikoguste ja summade agregeerimine |
+| `ORDER BY` | Tulemuste järjestamine |
+| `LIMIT` | Tulemuste arvu piiramine |
 
 ---
 
 ## INNER JOIN
 
-Õppisin kasutama `INNER JOIN`-i olukorras, kus soovin tulemusse ainult neid ridu, millel leidub mõlemas tabelis vastav kirje.
+`INNER JOIN` võimaldab ühendada erinevate tabelite read ühise võtme alusel.
 
-Näiteks:
+Tulemusse jäävad ainult need read, millel on mõlemas ühendatavas tabelis vastav kirje.
 
-```sql
-SELECT
-    c.first_name,
-    c.last_name,
-    c.city,
-    s.sale_date,
-    s.total_price
-FROM sales s
-INNER JOIN customers c
-    ON s.customer_id = c.customer_id;
-```
-
-Sellise päringu puhul kuvatakse ainult kliendid, kellel on vastav müügitehing.
-
-Kui kliendil pole ühtegi müüki, ei ilmu ta `INNER JOIN` tulemusse.
+Näiteks saab `sales` ja `products` tabeli ühendamisel siduda müügitehingu konkreetse tootega ning analüüsida müüdud koguseid toodete ja kategooriate lõikes.
 
 ---
 
 ## LEFT JOIN
 
-`LEFT JOIN` võimaldab säilitada kõik vasakpoolse tabeli read ka siis, kui parempoolses tabelis vastavat kirjet ei ole.
+`LEFT JOIN` säilitab kõik vasakpoolse tabeli read ka siis, kui parempoolses tabelis vastavat kirjet ei ole.
 
-Näiteks:
+Oluline õpitud muster oli:
 
-```sql
-SELECT
-    c.first_name,
-    c.last_name,
-    s.sale_id
-FROM customers c
-LEFT JOIN sales s
-    ON c.customer_id = s.customer_id;
-```
-
-Sellisel juhul kuvatakse kõik kliendid.
-
-Kui kliendil pole ühtegi müüki, on tema müügiandmete väärtuseks `NULL`.
-
-See aitab leida andmetest gruppe, mis tavalise `INNER JOIN` kasutamisel tulemusest välja jääksid.
-
----
-
-## LEFT JOIN + WHERE IS NULL
-
-Üks olulisemaid Week 3 jooksul õpitud mustreid oli:
-
-```sql
-LEFT JOIN ... WHERE ... IS NULL
-```
+`LEFT JOIN + WHERE ... IS NULL`
 
 Selle abil saab leida kirjeid, millele teises tabelis vastet ei ole.
 
-Näiteks kliendid, kes pole kunagi ostnud:
-
-```sql
-SELECT
-    c.first_name,
-    c.last_name,
-    c.email,
-    c.city
-FROM customers c
-LEFT JOIN sales s
-    ON c.customer_id = s.customer_id
-WHERE s.sale_id IS NULL;
-```
-
-Sama loogikat saab kasutada näiteks:
-
-* klientide leidmiseks, kellel pole oste;
-* toodete leidmiseks, mida pole müüdud;
-* töötajate leidmiseks, kellel pole projekte;
-* muude puuduvate seoste tuvastamiseks.
-
----
-
-## RIGHT JOIN
-
-Tutvusin ka `RIGHT JOIN`-iga.
-
-`RIGHT JOIN` on sisuliselt `LEFT JOIN`-i peegelpilt — see säilitab kõik parempoolse tabeli read.
-
-Praktikas on sageli lihtsam muuta tabelite järjekorda ning kasutada `LEFT JOIN`-i, mistõttu kasutatakse `RIGHT JOIN`-i analüüsis harvem.
+Näiteks saab selle meetodiga tuvastada tooted, mida ei ole kunagi müüdud.
 
 ---
 
 ## Mitme tabeli ühendamine
 
-Week 3 oluline osa oli õppida ühendama ühes päringus rohkem kui kahte tabelit.
+Week 3 jooksul õppisin ühendama ka rohkem kui kahte tabelit.
 
-Näiteks:
-
-```sql
-SELECT
-    c.first_name || ' ' || c.last_name AS klient,
-    c.city AS linn,
-    s.sale_date AS müügi_kuupäev,
-    p.product_name AS toode,
-    p.category AS kategooria,
-    s.quantity AS kogus,
-    s.total_price AS rea_summa
-FROM sales s
-INNER JOIN customers c
-    ON s.customer_id = c.customer_id
-INNER JOIN products p
-    ON s.product_id = p.product_id;
-```
-
-Selline päring ühendab kolm erinevat andmedomeeni:
+Minu individuaalses analüüsis olid olulised eelkõige:
 
 ```text
-KLIENT + MÜÜK + TOODE
+sales
+  │
+  ├──── products
+  │
+  └──── inventory
 ```
+Nende tabelite ühendamine võimaldas analüüsida müüki koos tooteinfo ja laoseisuga.
 
-See võimaldab ühe päringuga näha, **kes ostis, mida ostis, millal ostis ja kui suure summa eest**.
+See annab üksikute tabelite vaatamisest oluliselt terviklikuma pildi ning võimaldab siduda omavahel näiteks:
+
+```text
+TOODE + MÜÜK + LAOSEIS
+```
+## Minu individuaalne töö — Roll C: tooted ja inventuur
+
+Minu Week 3 individuaalse töö fookus oli UrbanStyle'i **toodete, müügi ja inventuuri analüüs**.
+
+Analüüsi aluseks olid peamiselt:
+
+- `products`;
+- `sales`;
+- `inventory`.
+
+JOIN-ide ja agregeerimise abil uurisin toodete müüki ning laoseisu erinevatest vaatenurkadest.
+
+Analüüsi tulemused hõlmasid:
+
+- enim müüdud toodete leidmist;
+- müügi analüüsimist tootekategooriate kaupa;
+- müümata toodete tuvastamist;
+- laoandmete ja toodete ühendamist;
+- toodete laoseisust ülevaate koostamist.
+
+Kõik analüüsis kasutatud SQL-päringud koos kommentaaridega asuvad failis:
+
+[`individual/week3_roll_c_tooted_inventuur.sql`](individual/week3_roll_c_tooted_inventuur.sql)
 
 ---
 
-## Tabelite aliased
+## Analüüsi tulemused
 
-Õppisin kasutama tabelite aliaseid, mis muudavad mitme tabeliga päringud oluliselt lühemaks ja loetavamaks.
+SQL-päringute tulemused on dokumenteeritud eraldi ekraanipiltidena.
 
-Näiteks:
+### Enim müüdud tooted
 
-```sql
-customers → c
-sales     → s
-products  → p
-```
+[`individual/enim_müüdud_tooted.png`](individual/enim_müüdud_tooted.png)
 
-Selle asemel, et kirjutada:
+Ülevaade toodetest, mida müüdi analüüsitavas andmestikus kõige rohkem.
 
-```sql
-customers.first_name
-sales.total_price
-```
+### Müük kategooriate kaupa
 
-saab kasutada:
+[`individual/müük_kategooriate_kaupa.png`](individual/müük_kategooriate_kaupa.png)
 
-```sql
-c.first_name
-s.total_price
-```
+Ülevaade müügitulemustest erinevate tootekategooriate lõikes.
 
-Mitme JOIN-iga päringutes aitab see paremini jälgida, millisest tabelist iga veerg pärineb.
+### Müümata tooted
 
----
+[`individual/müümata_tooted.png`](individual/müümata_tooted.png)
 
-## JOIN-id koos agregeerimisega
+Analüüs toodetest, millele müügiandmetes vastavat tehingut ei leitud.
 
-JOIN-e saab kombineerida ka varem õpitud SQL-käskudega, näiteks:
+### Lao väljavõte
 
-* `GROUP BY`;
-* `COUNT()`;
-* `SUM()`;
-* `ORDER BY`;
-* `LIMIT`.
+[`individual/lao_väljavõte.png`](individual/lao_väljavõte.png)
 
-Näiteks saab ühendada `sales`, `customers` ja `products` tabelid ning arvutada müüki linnade ja tootekategooriate kaupa:
-
-```sql
-SELECT
-    c.city AS linn,
-    p.category AS kategooria,
-    COUNT(s.sale_id) AS müüke,
-    SUM(s.total_price) AS kogumüük
-FROM sales s
-INNER JOIN customers c
-    ON s.customer_id = c.customer_id
-INNER JOIN products p
-    ON s.product_id = p.product_id
-GROUP BY c.city, p.category
-ORDER BY kogumüük DESC;
-```
-
-Selline päring ei ühenda enam lihtsalt tabeleid, vaid aitab vastata konkreetsele äriküsimusele.
+Ülevaade toodete laoandmetest ja laoseisust.
 
 ---
 
@@ -252,19 +188,19 @@ Selline päring ei ühenda enam lihtsalt tabeleid, vaid aitab vastata konkreetse
 
 Week 3 jooksul õppisin:
 
-* mõistma tabelite vahelisi seoseid;
-* eristama `Primary Key` ja `Foreign Key` rolle;
-* ühendama kahte tabelit `INNER JOIN` abil;
-* kasutama `ON` klauslit õige ühendusvälja määramiseks;
-* kasutama tabelite aliaseid;
-* mõistma `INNER JOIN` ja `LEFT JOIN` erinevust;
-* säilitama `LEFT JOIN` abil ka read, millel teises tabelis vastet pole;
-* leidma puuduvaid seoseid `LEFT JOIN + WHERE IS NULL` abil;
+* mõistma relatsioonilise andmebaasi tabelite vahelisi seoseid;
+* eristama Primary Key ja Foreign Key rolle;
+* ühendama tabeleid ühiste võtmete kaudu;
+* kasutama `INNER JOIN`-i sobivate kirjete ühendamiseks;
+* kasutama `LEFT JOIN`-i kõigi vasaku tabeli kirjete säilitamiseks;
+* kasutama `LEFT JOIN + WHERE IS NULL` mustrit vasteta kirjete leidmiseks;
 * mõistma `RIGHT JOIN` tööpõhimõtet;
-* ühendama ühes päringus kolme või enamat tabelit;
+* kasutama tabelite aliaseid SQL-päringute loetavuse parandamiseks;
+* ühendama rohkem kui kahte tabelit;
 * kombineerima JOIN-e `GROUP BY`, `COUNT()` ja `SUM()` funktsioonidega;
-* valima JOIN-i tüübi vastavalt äriküsimusele;
-* liikuma üksikute tabelite analüüsimiselt tervikliku ärilise vaate koostamiseni.
+* ühendama müügi-, toote- ja laoandmeid;
+* analüüsima toodete müüki ja laoseisu ühe tervikuna;
+* tõlgendama JOIN-päringute tulemusi ärilisest vaatenurgast.
 
 Kõige olulisem õppetund oli, et JOIN ei ole lihtsalt viis tabelite tehniliseks ühendamiseks. **JOIN võimaldab siduda erinevates tabelites olevad andmed üheks tervikuks ja vastata küsimustele, millele ühe tabeli põhjal vastata ei saa.**
 
@@ -295,7 +231,10 @@ Näiteks saab ühendatud andmete põhjal:
 * võrrelda tootekategooriate müüki linnade lõikes;
 * tuvastada registreerunud kliendid, kes pole veel ostnud;
 * leida tooted, mida pole kunagi müüdud;
-* suunata turunduskampaaniaid kliendi asukoha ja ostueelistuste järgi.
+* suunata turunduskampaaniaid kliendi asukoha ja ostueelistuste järgi;
+* hinnata toodete laoseisu;
+* tuvastada võimalikke aeglaselt liikuvaid varusid;
+* toetada varude planeerimise ja ostujuhtimise otsuseid.
 
 See näitas, miks relatsioonilises andmebaasis hoitakse infot erinevates tabelites, kuid analüüsi tegemisel tuleb need andmed sageli uuesti omavahel siduda.
 
@@ -316,37 +255,40 @@ week-3/
 |   └── müümata_tooted.png
 │
 └── team/
-    └── week3_team_summary.md
+    └── week3.md
 ```
 
 ### Individuaalne töö
 
-[`individual/week3_roll_c_tooted_inventuur.sql`](individual/week3_roll_c_tooted_inventuur.sql)
+[`individual/week3_roll_c_tooted_inventuur.sql`](individual/week3_roll_c_tooted_inventuur.sql)  
+Minu Roll C SQL-päringud toodete, müügi ja inventuuri analüüsimiseks.
 
-SQL-päringud koos kommentaaridega, mida kasutasin `INNER JOIN`, `LEFT JOIN` ja mitme tabeli JOIN-ide harjutamiseks ning UrbanStyle'i andmete analüüsimiseks.
+Analüüsi tulemused:
+
+- [`enim_müüdud_tooted.png`](individual/enim_müüdud_tooted.png)
+- [`müük_kategooriate_kaupa.png`](individual/müük_kategooriate_kaupa.png)
+- [`müümata_tooted.png`](individual/müümata_tooted.png)
+- [`lao_väljavõte.png`](individual/lao_väljavõte.png)
 
 ### Meeskonnatöö
 
-Meeskonnatöö käigus kasutati JOIN-e UrbanStyle'i erinevates tabelites olevate andmete ühendamiseks ning tulemuste põhjal äriliste järelduste tegemiseks.
+Meeskonnatöö käigus ühendati erinevate rollide analüüsid terviklikumaks UrbanStyle'i andmeanalüüsiks.
 
-Individuaalse töö käigus õpitud JOIN-ide kasutamine oli sisendiks meeskonna ühisele analüüsile.
+Minu panus meeskonnatöösse oli **Roll C — toodete, müügi ja inventuuri analüüs**.
 
-[`team/week3_team_summary.md`](team/week3_team_summary.md)
-
-Kokkuvõte Week 3 meeskonnatööst ning meeskonna analüüsi peamistest tulemustest.
+[`team/week3.md`](team/week3.md)  
+Week 3 meeskonnatöö kokkuvõte.
 
 **Meeskonna ühine töö:**
-link siia...
+(https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week3)
 
 ---
 
 ## Kokkuvõte
 
-Week 3 jooksul õppisin ühendama SQL JOIN-ide abil erinevates tabelites paiknevaid andmeid.
+Week 3 jooksul õppisin SQL JOIN-ide abil ühendama erinevates tabelites paiknevaid andmeid.
 
-`INNER JOIN` võimaldas leida omavahel sobivad kirjed, `LEFT JOIN` säilitada ka vasteta kirjed ning `LEFT JOIN + WHERE IS NULL` tuvastada näiteks kliente, kes pole kunagi ostnud, või tooteid, mida pole müüdud.
+Minu Roll C analüüs keskendus `products`, `sales` ja `inventory` tabelitele. Nende ühendamise abil sain analüüsida enim müüdud tooteid, müüki kategooriate kaupa, müümata tooteid ning toodete laoseisu.
 
-Mitme tabeli ühendamise abil sain siduda kliendi-, müügi- ja tooteandmed üheks tervikuks ning kasutada tulemusi konkreetsetele äriküsimustele vastamiseks.
-
-Week 3 oli oluline samm üksikute SQL-päringute kirjutamiselt **seotud andmete põhjal tervikliku ärianalüüsi koostamise suunas**.
+Week 3 oli oluline samm üksikute tabelite analüüsimiselt seotud andmete põhjal terviklikuma ärianalüüsi koostamise suunas.
 
