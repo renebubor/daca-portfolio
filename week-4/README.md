@@ -428,7 +428,8 @@ Minu panus meeskonnatöösse oli:
 
 ['team/week4.md'](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4)
 
-**Meeskonna ühine töö:**  
+**Meeskonna ühine töö:** 
+ 
 [`meeskonna töö viide week-4`](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4/teamwork.md)
 
 ---

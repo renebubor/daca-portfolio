@@ -56,29 +56,35 @@ HAVING COUNT(DISTINCT o.sale_id) > 20 --vähem kui 20 tellimust välistatud
 ORDER BY kuu,
     kogukäive DESC;
 --4.Esitlus juhatusele:
-/* Meie kõige efektiivsem kanal on kogukäibe järgi google_organic, mille keskmine tellimus on 286 €, toob z klienti kuus.*/
+/* Meie kõige efektiivsem kanal on kogukäibe järgi google_organic, mille keskmine tellimus on 286 €.*/
 ---
-select *
-from sales
-limit 1;
 WITH turunduskanali_myyk AS (
     -- CTE 1: kanali kogumüük 
     SELECT w.source AS turunduskanal,
+        DATE_TRUNC('month', o.sale_date) AS kuu,
         COUNT(DISTINCT o.sale_id) AS tellimusi,
-        SUM(o.total_price) AS kogukäive,
-        LAG(SUM(o.total_price)) OVER (
-            PARTITION BY w.source
-            ORDER BY DATE_TRUNC('month', o.sale_date)
-        ) AS eelmise_kuu_käive
+        SUM(o.total_price) AS kogukäive
     FROM sales o
         JOIN customers c ON o.customer_id = c.customer_id
         LEFT JOIN web_logs w ON c.customer_id = w.customer_id
     GROUP BY w.source,
-        o.sale_date
+        DATE_TRUNC('month', o.sale_date)
     HAVING COUNT(DISTINCT o.sale_id) > 10 --rohkem kui 10 tellimust
 ),
+myyk_eelmise_kuuga AS (
+    -- CTE 2: lisan eelmise kuu käibe
+    SELECT turunduskanal,
+        kuu,
+        tellimusi,
+        kogukäive,
+        LAG(kogukäive) OVER (
+            PARTITION BY turunduskanal
+            ORDER BY kuu
+        ) AS eelmise_kuu_käive
+    FROM turunduskanali_myyk
+),
 unikaalsed_kliendid AS (
-    -- CTE 2: kanali unikaalsete klientide arv
+    -- CTE 3: kanali unikaalsete klientide arv
     SELECT w.source AS turunduskanal,
         COUNT(DISTINCT c.customer_id) AS kliente
     FROM customers c
@@ -86,11 +92,15 @@ unikaalsed_kliendid AS (
     GROUP BY w.source
 )
 SELECT tm.turunduskanal,
-    uk.kliente,
-    tm.tellimusi,
-    tm.kogukäive,
-    tm.eelmise_kuu_käive,
-    ROUND(tm.kogukäive / NULLIF(uk.kliente, 0), 2) AS müük_per_klient
-FROM turunduskanali_myyk tm
+    MAX(uk.kliente) AS kliente,
+    SUM(tm.tellimusi) AS tellimusi,
+    SUM(tm.kogukäive) AS käive,
+    SUM(tm.eelmise_kuu_käive) AS eelmise_kuu_käive,
+    ROUND(
+        SUM(tm.kogukäive) / NULLIF(MAX(uk.kliente), 0),
+        2
+    ) AS müük_per_klient
+FROM myyk_eelmise_kuuga tm
     JOIN unikaalsed_kliendid uk ON tm.turunduskanal = uk.turunduskanal
+GROUP BY tm.turunduskanal
 ORDER BY müük_per_klient DESC;
