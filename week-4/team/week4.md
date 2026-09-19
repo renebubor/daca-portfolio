@@ -13,4 +13,4 @@ Minu ülesanded olid:
 
 ## Meeskonna ühine väljund
 
-[https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4]
+[GitHub väljund](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4)
