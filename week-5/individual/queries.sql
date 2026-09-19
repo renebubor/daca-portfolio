@@ -31,3 +31,10 @@ FROM inventory i
     JOIN products p ON i.product_id = p.product_id
 GROUP BY p.category
 ORDER BY kogus DESC;
+--KAART D - Investor Dashboard
+--kontrollpäringud
+--kogutulu, ostu teinud kientide arvu ja keskmise tellimuse maksumuse leidmine
+SELECT SUM(total_price) AS kogutulu,
+    COUNT(DISTINCT customer_id) AS kliendid,
+    AVG(total_price) AS kesk_tellimus
+FROM sales;
