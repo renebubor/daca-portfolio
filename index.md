@@ -36,6 +36,11 @@ SQL andmete agregeerimine ja koondanalüüs.
 
 [Vaata Week 4 →](week-4/)
 
+### Week 5 - Visualiseerimine
+Esmane graafikute, KPIde tegemine ja disaini üldpõhimõtete rakendamine.
+
+[Vaata Week 5 →](week-5/)
+
 ## Nädalapõhine õppeplaan
 
 | Nädal | Teema | Staatus |
