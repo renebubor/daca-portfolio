@@ -364,12 +364,12 @@ Minu panus meeskonnatöösse oli:
 
 **Roll B — Marketing Dashboard (Anna vaade)**
 
-[`team/week5.md`](team/week5.md)
+[`team/week5.md`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week5)
 
 Week 5 meeskonnatöö lühikokkuvõte ja viide ühisele väljundile.
 
 **Meeskonna ühine töö:**  
-[https://github.com/laura-johanson/urbanstyle-marketing-data/tree/89eba75c52d646af3e5ca5514d49fb4bfeab6967/week5]
+[`meeskonna töö viide week-5`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/89eba75c52d646af3e5ca5514d49fb4bfeab6967/week5)
 
 ---
 
