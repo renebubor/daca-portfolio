@@ -337,7 +337,7 @@ week-5/
 
 ### Power BI tööfail
 
-['urbanstyle_week5_dashboard_all.pbix'](urbanstyle_week5_dashboard_all.pbix)
+['urbanstyle_week5_dashboard_all.pbix'](individual/urbanstyle_week5_dashboard_all.pbix)
 
 Power BI raport sisaldab Rollide A, B, C ja D lahendusi.
 
@@ -345,13 +345,13 @@ Minu individuaalne kodutöö oli **Roll B — Marketing Dashboard**, ülejäänu
 
 ### Power BI tööfaili andmete kontroll
 
-['queries.sql'](queries.sql)
+['queries.sql'](individual/queries.sql)
 
 Dashboardi andmete kontrolliks kasutasin SQL päringuid
 
 ### Dashboard'i ekraanipilt
 
-['Marketing_Dashboard.png'](Marketing_Dashboard.png)
+['Marketing_Dashboard.png'](individual/Marketing_Dashboard.png)
 
 Ekraanipilt näitab minu Week 5 Power BI töö tulemust.
 
@@ -364,7 +364,7 @@ Minu panus meeskonnatöösse oli:
 
 **Roll B — Marketing Dashboard (Anna vaade)**
 
-[`team/week5.md`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week5)
+[`team/week5.md`](team/week5.md)
 
 Week 5 meeskonnatöö lühikokkuvõte ja viide ühisele väljundile.
 
