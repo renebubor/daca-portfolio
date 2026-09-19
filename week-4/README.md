@@ -426,7 +426,7 @@ Minu panus meeskonnatöösse oli:
 **Roll A — müügi koondandmed**  
 **Roll D — turunduskanalite efektiivsus**
 
-['team/week4.md'](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4)
+['team/week4.md'](team/week4.md)
 
 **Meeskonna ühine töö:** 
  
