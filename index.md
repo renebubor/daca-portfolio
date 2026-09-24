@@ -36,10 +36,15 @@ SQL andmete agregeerimine ja koondanalüüs.
 
 [Vaata Week 4 →](week-4/)
 
-### Week 5 - Visualiseerimine
-Esmane graafikute, KPIde tegemine ja disaini üldpõhimõtete rakendamine.
+### Week 5 - Power BI Visualiseerimise disain
+Dashboard'ide, KPI-de ja sobivate diagrammide loomine erinevate stakeholder'ite vajaduste järgi.
 
 [Vaata Week 5 →](week-5/)
+
+### Week 6 - Andmelugu ja dashboard'i viimistlemine
+Asukohapõhiste Power BI vaadete loomine, annotatsioonide ja viitejoonte lisamine ning andmetest ärilise narratiivi koostamine.
+
+[Vaata Week 6 →](week-6/)
 
 ## Nädalapõhine õppeplaan
 
