@@ -451,7 +451,6 @@ week-6/
 │   ├── urbanstyle_week6_dashboard_Rene.pbix
 │   ├── Dashboard_screenshot.png
 │   ├── urbanstyle_dashboard_export.pdf
-│   ├── week6_parnu_narrative.md
 │   └── week6_executive_summary.md
 │
 └── team/
