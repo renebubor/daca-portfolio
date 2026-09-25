@@ -55,6 +55,6 @@ Asukohapõhiste Power BI vaadete loomine, annotatsioonide ja viitejoonte lisamin
 | 2 | SQL Cleaning | Lõpetatud |
 | 3 | SQL JOINs | Lõpetatud |
 | 4 | SQL Aggregation | Lõpetatud |
-| 5-6 | Visualiseerimine | Käimas |
-| 7-8 | Python | Tulemas |
+| 5-6 | Visualiseerimine | Lõpetatud |
+| 7-8 | Python | Käimas |
 | 9-10 | Portfoolio + Karjäär | Tulemas |
