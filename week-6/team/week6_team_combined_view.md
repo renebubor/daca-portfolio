@@ -17,4 +17,4 @@ Analüüsi fookuses olid Pärnu müügi hooajalisus, müügitipp ja madalseis, T
 
 ## Meeskonna ühine väljund
 
-[GitHub väljund](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/89eba75c52d646af3e5ca5514d49fb4bfeab6967/week6)
+[GitHub väljund](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/cddefd78ec15099bf58a95482c88d50916cd6f0f/week6)

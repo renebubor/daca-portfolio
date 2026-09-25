@@ -481,17 +481,11 @@ Ekraanipilt minu Pärnu dashboard'ist.
 
 PDF kujul väljavõte minu koostatud Power BI dashboardidest.
 
-### Andmelugu
-
-[`individual/week6_parnu_narrative.md`](individual/week6_parnu_narrative.md)
-
-Pärnu analüüsi põhjal koostatud lühike andmelugu.
-
 ### Executive Summary
 
 [`individual/week6_executive_summary.md`](individual/week6_executive_summary.md)
 
-Pärnu dashboard'i peamised järeldused juhtidele.
+Pärnu dashboard'i lühike andmelugu ja peamised järeldused juhtidele.
 
 ---
 
@@ -515,7 +509,7 @@ Minu panus oli:
 Week 6 meeskonnatöö lühikokkuvõte ja viide ühisele väljundile.
 
 **Meeskonna ühine töö:**  
-[Lisa siia meeskonna GitHubi / Google Slides / ühise töö link]
+[`meeskonna töö viide week-6`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/cddefd78ec15099bf58a95482c88d50916cd6f0f/week6)
 
 ---
 
