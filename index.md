@@ -46,6 +46,11 @@ Asukohapõhiste Power BI vaadete loomine, annotatsioonide ja viitejoonte lisamin
 
 [Vaata Week 6 →](week-6/)
 
+### Week 7 - Python & Pandas
+Andmete laadimine, puhastamine ja analüüsimine Pythonis, RFM kliendisegmentide loomine ning tulemuste visualiseerimine Plotly abil.
+
+[Vaata Week 7 →](week-7/)
+
 ## Nädalapõhine õppeplaan
 
 | Nädal | Teema | Staatus |
