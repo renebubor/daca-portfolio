@@ -481,7 +481,7 @@ week-7/
 │   └── week7_supabase_rfm.ipynb
 │
 └── team/
-    └── [meeskonna ühine notebook / kokkuvõte]
+    └── week7_team_rfm.md
 ```
 
 ### Lähteandmed
@@ -537,7 +537,7 @@ Minu ülesanne oli tagada, et järgmised analüüsietapid saaksid kasutada korre
 
 Meeskonna ühine väljund:
 
-[Lisa siia `team` kaustas oleva notebook'i või meeskonna GitHubi link]
+[`meeskonna töö viide week-7`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/67e2976f6b557dcfc4be5ea694f12ce6bf628064/week7)
 
 ---
 
