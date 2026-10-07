@@ -5,29 +5,32 @@ Roll D: Automation Script (Automatiseerimisskript)
 ja eksportimise üheks pipeline'iks.
 """
 
-import os
-from datetime import datetime
-import logging
-import time
-import yaml
-
-with open("config.yaml", "r", encoding="utf-8") as file:
-    config = yaml.safe_load(file)
-
-from data_fetcher import fetch_sales, fetch_customers, fetch_products
-from transform import (
-    clean_data,
-    calculate_weekly_aggregates,
-    calculate_kpis,
-    merge_datasets
-)
-
 from visualize_export import (
     create_weekly_chart,
     create_kpi_summary,
     export_results,
     export_pipeline_notification
 )
+from transform import (
+    clean_data,
+    calculate_weekly_aggregates,
+    calculate_kpis,
+    merge_datasets
+)
+from data_fetcher import fetch_sales, fetch_customers, fetch_products
+import os
+from datetime import datetime
+import logging
+import time
+import yaml
+from pathlib import Path
+
+base_dir = Path(__file__).resolve().parent
+config_path = base_dir / "config.yaml"
+
+with open(config_path, "r", encoding="utf-8") as file:
+    config = yaml.safe_load(file)
+
 
 # Logimise seadistus
 log_dir = config["log_dir"]
@@ -155,13 +158,12 @@ def run_pipeline(start_date, end_date):
         # -----------------------------------------
         # 5. KOKKUVÕTE
         # -----------------------------------------
-
-        logging.info("Pipeline lõpetatud edukalt.")
         export_pipeline_notification(
             config["output_dir"],
             status="ÕNNESTUS",
             kpis=kpi_result
         )
+        logging.info("Pipeline lõpetatud edukalt.")
 
         print("\n--- PIPELINE KOKKUVÕTE ---")
         print(f"Puhastatud müügiridu: {len(sales_clean)}")
