@@ -51,6 +51,11 @@ Andmete laadimine, puhastamine ja analüüsimine Pythonis, RFM kliendisegmentide
 
 [Vaata Week 7 →](week-7/)
 
+### Week 8 - Python Data Pipeline
+Automatiseeritud andmepipeline'i loomine andmete laadimiseks, puhastamiseks, valideerimiseks ja eksportimiseks.
+
+[Vaata Week 8 →](week-8/)
+
 ## Nädalapõhine õppeplaan
 
 | Nädal | Teema | Staatus |
