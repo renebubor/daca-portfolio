@@ -1,0 +1,9 @@
+start_date: "2023-01-01"
+end_date: "2026-12-31"
+
+output_dir: "output"
+log_dir: "logs"
+
+retry:
+  max_attempts: 3
+  initial_delay: 1

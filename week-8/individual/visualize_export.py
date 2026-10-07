@@ -7,6 +7,7 @@ Loob töödeldud andmetest Plotly diagrammid ja salvestab tulemused CSV- ning HT
 
 import os
 from datetime import datetime
+import pandas as pd
 
 import plotly.express as px
 import plotly.graph_objects as go
@@ -144,6 +145,57 @@ def export_results(
             "KPI kokkuvõte salvestatud:",
             kpi_path
         )
+
+
+def export_pipeline_notification(
+    output_dir,
+    status,
+    kpis=None,
+    error_message=None,
+    elapsed_time=None
+):
+    """
+    Salvestab pipeline'i tulemuse Exceli teavitusraportina.
+    """
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    notification_path = os.path.join(
+        output_dir,
+        f"pipeline_notification_{timestamp}.xlsx"
+    )
+
+    report_data = {
+        "Aeg": [datetime.now().strftime("%Y-%m-%d %H:%M:%S")],
+        "Staatus": [status],
+        "Kogukäive": [
+            kpis.get("total_revenue") if kpis else None
+        ],
+        "Unikaalsed kliendid": [
+            kpis.get("unique_customers") if kpis else None
+        ],
+        "Keskmine tellimus": [
+            kpis.get("avg_order_value") if kpis else None
+        ],
+        "Tööaeg sekundites": [elapsed_time],
+        "Veateade": [error_message]
+    }
+
+    report_df = pd.DataFrame(report_data)
+
+    report_df.to_excel(
+        notification_path,
+        index=False
+    )
+
+    print(
+        "Pipeline teavitusraport salvestatud:",
+        notification_path
+    )
+
+    return notification_path
 
 
 if __name__ == "__main__":

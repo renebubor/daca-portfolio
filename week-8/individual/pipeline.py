@@ -5,8 +5,14 @@ Roll D: Automation Script (Automatiseerimisskript)
 ja eksportimise üheks pipeline'iks.
 """
 
+import os
+from datetime import datetime
 import logging
 import time
+import yaml
+
+with open("config.yaml", "r", encoding="utf-8") as file:
+    config = yaml.safe_load(file)
 
 from data_fetcher import fetch_sales, fetch_customers, fetch_products
 from transform import (
@@ -15,17 +21,38 @@ from transform import (
     calculate_kpis,
     merge_datasets
 )
+
 from visualize_export import (
     create_weekly_chart,
     create_kpi_summary,
-    export_results
+    export_results,
+    export_pipeline_notification
 )
 
-
 # Logimise seadistus
+log_dir = config["log_dir"]
+os.makedirs(
+    log_dir,
+    exist_ok=True
+)
+
+date_str = datetime.now().strftime("%Y%m%d")
+
+log_file = os.path.join(
+    log_dir,
+    f"pipeline_{date_str}.log"
+)
+
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler(
+            log_file,
+            encoding="utf-8"
+        ),
+        logging.StreamHandler()
+    ]
 )
 
 
@@ -44,12 +71,17 @@ def run_pipeline(start_date, end_date):
 
         logging.info("Extract etapp algas.")
 
+        max_attempts = config["retry"]["max_attempts"]
+        initial_delay = config["retry"]["initial_delay"]
+
         sales_data = fetch_sales(
             start_date,
-            end_date
+            end_date,
+            max_attempts,
+            initial_delay
         )
-        customers_data = fetch_customers()
-        products_data = fetch_products()
+        customers_data = fetch_customers(max_attempts, initial_delay)
+        products_data = fetch_products(max_attempts, initial_delay)
 
         logging.info(
             "Extract valmis: müük %s rida, kliendid %s rida, tooted %s rida.",
@@ -113,7 +145,7 @@ def run_pipeline(start_date, end_date):
 
         export_results(
             weekly_result,
-            "output",
+            config["output_dir"],
             weekly_chart,
             kpi_chart
         )
@@ -125,6 +157,11 @@ def run_pipeline(start_date, end_date):
         # -----------------------------------------
 
         logging.info("Pipeline lõpetatud edukalt.")
+        export_pipeline_notification(
+            config["output_dir"],
+            status="ÕNNESTUS",
+            kpis=kpi_result
+        )
 
         print("\n--- PIPELINE KOKKUVÕTE ---")
         print(f"Puhastatud müügiridu: {len(sales_clean)}")
@@ -141,13 +178,20 @@ def run_pipeline(start_date, end_date):
             "Pipeline ebaõnnestus: %s",
             error
         )
+        export_pipeline_notification(
+            config["output_dir"],
+            status="EBAÕNNESTUS",
+            error_message=str(error)
+        )
+
+        raise
 
 
 if __name__ == "__main__":
 
     start_time = time.time()
 
-    run_pipeline("2023-01-01", "2026-12-31")
+    run_pipeline(config["start_date"], config["end_date"])
 
     elapsed_time = time.time() - start_time
 

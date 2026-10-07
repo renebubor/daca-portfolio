@@ -61,6 +61,18 @@ def clean_data(df):
     )
 
     # Null- ja negatiivsete müügisummade kontroll
+    # total_price teisendamine numbriliseks
+    df_clean["total_price"] = pd.to_numeric(
+        df_clean["total_price"],
+        errors="coerce"
+    )
+
+    # Teisendamisel tekkinud vigaste väärtuste eemaldamine
+    df_clean = df_clean.dropna(
+        subset=["total_price"]
+    )
+
+    # Null- ja negatiivsete müügisummade kontroll
     negative_prices = (
         df_clean["total_price"] <= 0
     ).sum()
@@ -145,9 +157,9 @@ def calculate_kpis(df):
     total_revenue = df["total_price"].sum()
     unique_customers = df["customer_id"].nunique()
 
-    # Kui olemas on sale_id, kasutame tellimuste arvu selle järgi
-    if "sale_id" in df.columns:
-        order_count = df["sale_id"].nunique()
+    # Kui olemas on invoice_id, kasutame tellimuste arvu selle järgi
+    if "invoice_id" in df.columns:
+        order_count = df["invoice_id"].nunique()
     else:
         order_count = len(df)
 
@@ -188,7 +200,8 @@ def merge_datasets(df_sales, df_customers):
         df_sales,
         df_customers,
         on="customer_id",
-        how="left"
+        how="left",
+        validate="m:1"
     )
 
     print(f"Liidetud andmestikus ridu: {len(merged_df)}")

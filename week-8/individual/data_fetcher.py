@@ -2,6 +2,7 @@
 Roll A: API Query (Andmete pärimine)
 """
 import os
+import time
 import pandas as pd
 from dotenv import load_dotenv
 from supabase import create_client
@@ -14,7 +15,31 @@ supabase_key = os.getenv("SUPABASE_KEY")
 supabase = create_client(supabase_url, supabase_key)
 
 
-def fetch_sales(start_date, end_date):
+def execute_with_retry(query, max_attempts, initial_delay):
+    """
+    Käivitab Supabase päringu retry loogikaga.
+    """
+
+    for attempt in range(max_attempts):
+        try:
+            return query.execute()
+
+        except Exception as error:  # pylint: disable=broad-exception-caught
+
+            if attempt == max_attempts - 1:
+                raise
+
+            wait_time = initial_delay * (2 ** attempt)
+
+            print(
+                f"Päring ebaõnnestus: {error}. "
+                f"Uus katse {wait_time} sekundi pärast."
+            )
+
+            time.sleep(wait_time)
+
+
+def fetch_sales(start_date, end_date, max_attempts=3, initial_delay=1):
     """
     Pärib müügiandmed Supabase'ist antud kuupäevade vahemikus.
     """
@@ -24,12 +49,11 @@ def fetch_sales(start_date, end_date):
         page_size = 1000
 
         while True:
-            response = supabase.table("sales").select("*") \
-                .gte("sale_date", start_date) \
-                .lte("sale_date", end_date) \
-                .range(page * page_size, (page + 1) * page_size - 1) \
-                .execute()
-
+            query = (supabase.table("sales").select("*")
+                     .gte("sale_date", start_date)
+                     .lte("sale_date", end_date)
+                     .range(page * page_size, (page + 1) * page_size - 1))
+            response = execute_with_retry(query, max_attempts, initial_delay)
             data = response.data
 
             if not data:
@@ -42,12 +66,12 @@ def fetch_sales(start_date, end_date):
 
         return df
 
-    except Exception as e:  # pylint: disable=broad-exception-caught
-        print(f"Viga müügiandmete pärimisel: {e}")
-        return pd.DataFrame()
+    except Exception as error:  # pylint: disable=broad-exception-caught
+        print(f"Viga müügiandmete pärimisel: {error}")
+        raise
 
 
-def fetch_customers():
+def fetch_customers(max_attempts=3, initial_delay=1):
     """
     Pärib kliendiandmed Supabase'ist.
     """
@@ -57,9 +81,9 @@ def fetch_customers():
         page_size = 1000
 
         while True:
-            response = supabase.table("customers_py").select("*") \
-                .range(page * page_size, (page + 1) * page_size - 1) \
-                .execute()
+            query = supabase.table("customers_py").select("*") \
+                .range(page * page_size, (page + 1) * page_size - 1)
+            response = execute_with_retry(query, max_attempts, initial_delay)
 
             data = response.data
 
@@ -78,7 +102,7 @@ def fetch_customers():
         return pd.DataFrame()
 
 
-def fetch_products():
+def fetch_products(max_attempts=3, initial_delay=1):
     """
     Pärib tooteandmed Supabase'ist.
     """
@@ -88,9 +112,9 @@ def fetch_products():
         page_size = 1000
 
         while True:
-            response = supabase.table("products").select("*") \
-                .range(page * page_size, (page + 1) * page_size - 1) \
-                .execute()
+            query = supabase.table("products").select("*") \
+                .range(page * page_size, (page + 1) * page_size - 1)
+            response = execute_with_retry(query, max_attempts, initial_delay)
 
             data = response.data
 
