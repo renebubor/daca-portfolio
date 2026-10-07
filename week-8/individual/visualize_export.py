@@ -1,7 +1,7 @@
 """
 Roll C: Visualization + Saving (Visualiseerimine ja salvestamine)
 
-Andmed päritakse transform.py-st
+Andmed päritakse data_fetcher.py-st ja transform.py-st
 Loob töödeldud andmetest Plotly diagrammid ja salvestab tulemused CSV- ning HTML-failidena.
 """
 
@@ -149,12 +149,12 @@ def export_results(
 if __name__ == "__main__":
 
     # ---------------------------------------------
-    # 1. Andmete pärimine
+    # 1. Andmete pärimine antud failis testimiseks
     # ---------------------------------------------
 
     sales_data = fetch_sales(
-        "2024-01-01",
-        "2024-12-31"
+        "2023-01-01",
+        "2026-12-31"
     )
 
     customers_data = fetch_customers()

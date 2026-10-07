@@ -24,7 +24,7 @@ def fetch_sales(start_date, end_date):
         page_size = 1000
 
         while True:
-            response = supabase.table("sales_py").select("*") \
+            response = supabase.table("sales").select("*") \
                 .gte("sale_date", start_date) \
                 .lte("sale_date", end_date) \
                 .range(page * page_size, (page + 1) * page_size - 1) \
@@ -109,9 +109,18 @@ def fetch_products():
         return pd.DataFrame()
 
 
-# küsin andmeid puhastamata tabelitest (korrektsete andmete lõpp 2025-02-28)
-df_sales = fetch_sales('2023-01-01', '2026-07-01')
-df_customers = fetch_customers()
-df_products = fetch_products()
-print(
-    f"Tellimusi: {len(df_sales)}, Kliente: {len(df_customers)}, Tooted: {len(df_products)}")
+if __name__ == "__main__":
+    # Testimise osa ajalise filtriga
+    sales_data = fetch_sales(
+        "2023-01-01",
+        "2026-12-31"
+    )
+
+    customers_data = fetch_customers()
+    products_data = fetch_products()
+
+    print(
+        f"Tellimusi: {len(sales_data)},"
+        f" Kliente: {len(customers_data)},"
+        f" Tooted: {len(products_data)}"
+    )

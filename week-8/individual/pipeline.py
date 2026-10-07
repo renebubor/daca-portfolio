@@ -29,7 +29,7 @@ logging.basicConfig(
 )
 
 
-def run_pipeline():
+def run_pipeline(start_date, end_date):
     """
     Käivitab kogu UrbanStyle pipeline'i:
     extract -> transform -> visualize -> export.
@@ -45,8 +45,8 @@ def run_pipeline():
         logging.info("Extract etapp algas.")
 
         sales_data = fetch_sales(
-            "2024-01-01",
-            "2024-12-31"
+            start_date,
+            end_date
         )
         customers_data = fetch_customers()
         products_data = fetch_products()
@@ -147,7 +147,7 @@ if __name__ == "__main__":
 
     start_time = time.time()
 
-    run_pipeline()
+    run_pipeline("2023-01-01", "2026-12-31")
 
     elapsed_time = time.time() - start_time
 
