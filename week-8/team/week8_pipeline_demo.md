@@ -33,8 +33,11 @@ Meeskonna lõpptulemuseks valmis modulaarne Python-andmepipeline, mille põhifai
 
 Pipeline'i käivitamisel luuakse automaatselt analüüsi tulemused CSV-failina, kaks HTML-visualiseeringut ning eraldi logifail pipeline'i töö jälgimiseks.
 
-**Meeskonna lahendus:**
-[Vaata Week 8 meeskonnatööd](lisa link)
+**Meeskonna lahendused:**
+[Andmete laadimine](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/8570c1a67cad89691be021840bd08d58e6f94a08/week8/data_fetcher.py)
+[Andmete puhastamine](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/8570c1a67cad89691be021840bd08d58e6f94a08/week8/transform.py)
+[Visualiseerimine ja tulemuste eksport](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/8570c1a67cad89691be021840bd08d58e6f94a08/week8/visualize_export.py)
+[Töövoo käivitus](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/8570c1a67cad89691be021840bd08d58e6f94a08/week8/pipeline.py)
 
-**Näidisväljundid:**
-[Vaata pipeline'i väljundeid](lisa link)
+**Kokkuvõte:**
+[Vaata pipeline'i analüüsi kokkuvõtet](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/8570c1a67cad89691be021840bd08d58e6f94a08/week8/Pipeline-anal%C3%BC%C3%BCs%20ja%20automatiseerimise%20soovitused.png)

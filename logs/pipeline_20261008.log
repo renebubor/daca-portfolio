@@ -1,0 +1,29 @@
+2026-10-08 15:34:31,309 - INFO - Pipeline käivitus.
+2026-10-08 15:34:31,309 - INFO - Extract etapp algas.
+2026-10-08 15:34:32,577 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=0&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:32,765 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=1000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:32,935 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=2000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:33,090 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=3000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:33,245 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=4000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:33,437 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=5000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:33,614 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=6000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:33,814 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=7000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:34,017 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=8000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:34,173 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=9000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:34,310 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=10000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:34,461 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/sales?select=%2A&sale_date=gte.2023-01-01&sale_date=lte.2025-02-28&offset=11000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:34,688 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/customers_py?select=%2A&offset=0&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:34,865 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/customers_py?select=%2A&offset=1000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:35,082 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/customers_py?select=%2A&offset=2000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:35,239 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/customers_py?select=%2A&offset=3000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:35,319 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/customers_py?select=%2A&offset=4000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:35,420 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/products?select=%2A&offset=0&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:35,515 - INFO - HTTP Request: GET https://qirlefyrafbhdcipcans.supabase.co/rest/v1/products?select=%2A&offset=1000&limit=1000 "HTTP/2 200 OK"
+2026-10-08 15:34:35,523 - INFO - Extract valmis: müük 10086 rida, kliendid 3150 rida, tooted 362 rida.
+2026-10-08 15:34:35,524 - INFO - Transform etapp algas.
+2026-10-08 15:34:35,759 - INFO - Transform valmis: puhastatud müük 8866 rida, nädalaid 114, liidetud andmestik 8866 rida.
+2026-10-08 15:34:35,760 - INFO - Visualiseerimise etapp algas.
+2026-10-08 15:34:37,164 - INFO - Visualiseerimise etapp valmis.
+2026-10-08 15:34:37,164 - INFO - Ekspordi etapp algas.
+2026-10-08 15:34:38,771 - INFO - Ekspordi etapp valmis.
+2026-10-08 15:34:39,847 - INFO - Pipeline lõpetatud edukalt.

@@ -658,7 +658,7 @@ Minu mooduli ülesanne oli võtta API-st pärinevad andmed, puhastada ja validee
 Week 8 meeskonnatöö kokkuvõte ja viide ühisele pipeline'i väljundile.
 
 **Meeskonna ühine töö:**
-[Lisa siia meeskonna GitHubi / ühise töö link]
+[`meeskonna töö viide week-8`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/8570c1a67cad89691be021840bd08d58e6f94a08/week8)
 
 ---
 
