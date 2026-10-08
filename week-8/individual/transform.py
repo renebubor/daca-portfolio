@@ -211,7 +211,7 @@ def merge_datasets(df_sales, df_customers):
 
 if __name__ == "__main__":
     # Testimise osa ajalise filtriga
-    sales_data = fetch_sales("2023-01-01", "2026-12-31")
+    sales_data = fetch_sales("2023-01-01", "2025-02-28")
     customers_data = fetch_customers()
     products_data = fetch_products()
 
