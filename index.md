@@ -66,5 +66,5 @@ Automatiseeritud andmepipeline'i loomine andmete laadimiseks, puhastamiseks, val
 | 3 | SQL JOINs | Lõpetatud |
 | 4 | SQL Aggregation | Lõpetatud |
 | 5-6 | Visualiseerimine | Lõpetatud |
-| 7-8 | Python | Käimas |
-| 9-10 | Portfoolio + Karjäär | Tulemas |
+| 7-8 | Python | Lõpetatud |
+| 9-10 | Portfoolio + Karjäär | Käimas |

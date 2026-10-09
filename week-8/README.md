@@ -590,20 +590,20 @@ Sisaldab pipeline'i konfiguratsiooni ja muudetavaid parameetreid.
 Käivitamisel luuakse repository juurkausta output/ kausta automaatselt analüüsi väljundfailid.
 
 # CSV väljund
-[`../output/weekly_results_....csv`](../output/weekly_results_20261007.csv)
+[`../output/weekly_results_....csv`](../output/weekly_results_20261008.csv)
 Sisaldab pipeline'i poolt arvutatud nädalasi koondandmeid, mida saab kasutada edasiseks analüüsiks või teistesse süsteemidesse laadimiseks.
 # Exceli väljund
-[`../output/weekly_results_....xlsx`](../output/weekly_results_20261007.xlsx)
+[`../output/pipeline_notification_....xlsx`](../output/pipeline_notification_20261008_153438.xlsx)
 Exceli väljund sisaldab pipeline'i genereeritud kokkuvõtlikku infot jagamiseks või edasiseks töötlemiseks.
 # Nädalase käibe visualiseering
-[`../output/weekly_revenue_....html`](../output/weekly_revenue_20261007.html)
+[`../output/weekly_revenue_....html`](../output/weekly_revenue_20261008.html)
 Interaktiivne Plotly visualiseering nädalase müügitulu muutusest.
 HTML-faili saab avada otse veebibrauseris.
 # KPI kokkuvõte
-[`../output/kpi_summary_....html`](../output/kpi_summary_20261007.html)
+[`../output/kpi_summary_....html`](../output/kpi_summary_20261008.html)
 Interaktiivne HTML-väljund, mis kuvab pipeline'i arvutatud peamised KPI-d.
 # Logifail
-[`../logs/pipeline_....log`](../logs/pipeline_20261007.log)
+[`../logs/pipeline_....log`](../logs/pipeline_20261008.log)
 Logifail salvestab pipeline'i käivituse käigus toimunud etapid ja võimalikud veateated.
 Logi abil saab kontrollida näiteks:
 - millal pipeline käivitus;
