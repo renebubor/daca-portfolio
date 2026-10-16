@@ -126,8 +126,6 @@ Oluline on osata selgitada:
 
 ## Week 9 failid
 
-Soovituslik portfoolio struktuur:
-
 ```text
 week-9/
 │

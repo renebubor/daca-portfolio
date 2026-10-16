@@ -1,6 +1,6 @@
 # Nädal 6 — Andmelugu ja Power BI dashboard'i viimistlemine
 
-> **DACA — Andmeanalüütiku Karjäärikiirendi**  
+> **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i asukohapõhiste dashboard'ide viimistlemine ja andmeloo jutustamine Power BI-s.
 
 ## Nädala eesmärk
@@ -440,7 +440,6 @@ See eristus on oluline, sest visualiseeringus nähtav korrelatsioon ei tõesta a
 
 ## Week 6 failid
 
-Soovituslik portfoolio struktuur:
 
 ```text
 week-6/
@@ -507,7 +506,7 @@ Minu panus oli:
 
 Week 6 meeskonnatöö lühikokkuvõte ja viide ühisele väljundile.
 
-**Meeskonna ühine töö:**  
+**Meeskonna ühine töö:**
 [`meeskonna töö viide week-6`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/cddefd78ec15099bf58a95482c88d50916cd6f0f/week6)
 
 ---
