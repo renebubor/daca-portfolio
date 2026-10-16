@@ -56,6 +56,11 @@ Automatiseeritud andmepipeline'i loomine andmete laadimiseks, puhastamiseks, val
 
 [Vaata Week 8 →](week-8/)
 
+### Week 9 - Karjääri ettevalmistus
+Junior andmeanalüütiku värbamisjuhendi ja hindamiskriteeriumide koostamine tööandja vaatenurgast.
+
+[Vaata Week 9 →](week-9/)
+
 ## Nädalapõhine õppeplaan
 
 | Nädal | Teema | Staatus |
