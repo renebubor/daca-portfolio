@@ -1,5 +1,18 @@
 # Nädal 7 — Python Pandas ja RFM kliendisegmenteerimine
 
+**Äriküsimus:** Kuidas valmistada andmed ette kliendisegmentide analüüsiks?
+
+**Minu panus:** Meeskonnas roll A: laadimine ja roll B: puhastamine. Individuaalselt kogu RFM-töövoog CSV ja Supabase sisendiga.
+
+**Vaata väljundit:** [CSV töövihik](individual/week7_csv_rfm.ipynb) · [Supabase töövihik](individual/week7_supabase_rfm.ipynb)
+
+**Tulemus ja piirang:** Laadimine, puhastus ja RFM-segmendid on koondatud töövihikutesse. Segmendid kirjeldavad ostukäitumist ega tõenda kampaaniate tulemuslikkust.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i kliendiandmete laadimine, puhastamine ja RFM-põhine kliendisegmenteerimine Python pandas abil.
 
@@ -560,3 +573,5 @@ Individuaalselt tegin läbi kogu RFM-pipeline'i kahel viisil — CSV-failidest j
 Lisaks põhitaseme RFM segmentatsioonile koostasin detailsema lahenduse, kus kliendid jagatakse rohkematesse segmentidesse. See võimaldab kliendikäitumist täpsemalt eristada ning annab turundusele parema aluse sihitud tegevuste planeerimiseks.
 
 Week 7 kõige olulisem õppetund oli, et **andmeanalüüs ei alga RFM-valemist ega diagrammist — see algab usaldusväärsest andmete laadimisest ja puhastamisest**.
+
+</details>

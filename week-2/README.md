@@ -1,5 +1,18 @@
 # Nädal 2: SQL Cleaning ehk andmete puhastamine
 
+**Äriküsimus:** Kuidas parandada kliendiandmeid kontrollitult?
+
+**Minu panus:** Kliendiandmete probleemide uurimine ja paranduste katsetamine testkoopial.
+
+**Vaata väljundit:** [Puhastuspäringud](individual/week2_customers_cleaning.sql) · [Puhastuslogi](individual/cleaning_log.md)
+
+**Tulemus ja piirang:** Puhastusotsused on dokumenteeritud. Duplikaate tuleb määratleda ärilise võtme, mitte ainult nime põhjal.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i andmekvaliteedi uurimine ja andmete puhastamine SQL-i abil.
 
@@ -218,8 +231,8 @@ Analüüsi käigus kontrollisin:
 
 Puhastamisel lähtusin põhimõttest, et algandmeid ei muudeta enne, kui muudatus on testkoopial kontrollitud.
 
-Kõik kasutatud SQL päringud koos kommentaaridega asuvad individuaalse töö ['SQL-failis'](week2/individual/week2_cuatomers_cleaning.sql)
-ja olulisemad päringud ning muutmiskäsud ['cleaning_log'](week2/individual/cleaning_log.md)failis.
+Kõik kasutatud SQL päringud koos kommentaaridega asuvad individuaalse töö ['SQL-failis'](individual/week2_customers_cleaning.sql)
+ja olulisemad päringud ning muutmiskäsud ['cleaning_log'](individual/cleaning_log.md)failis.
 
 ---
 
@@ -309,3 +322,5 @@ Week 2 jooksul liikusin andmete esmasest uurimisest edasi andmekvaliteedi proble
 Kõige olulisem põhimõte oli turvaline puhastamise töövoog: **tuvasta probleem, dokumenteeri see, testi parandust koopial, kontrolli tulemust ja alles seejärel rakenda muudatus algandmetele**.
 
 See loob aluse usaldusväärsele andmeanalüüsile, sest analüüsi ja aruandluse kvaliteet sõltub otseselt lähteandmete kvaliteedist.
+
+</details>

@@ -1,5 +1,18 @@
 # Nädal 3 — SQL JOIN-id
 
+**Äriküsimus:** Kuidas ühendada müügi-, toote- ja laoandmed?
+
+**Minu panus:** Toodete ja inventuuri analüüs SQL JOIN-idega.
+
+**Vaata väljundit:** [SQL-päringud](individual/week3_roll_c_tooted_inventuur.sql)
+
+**Tulemus ja piirang:** Päringud toetavad müümata toodete, müügimahtude ja laoseisude uurimist. JOIN-i kardinaalsust tuleb kontrollida enne summade tõlgendamist.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i erinevates tabelites olevate andmete ühendamine ja äriküsimustele vastamine SQL JOIN-ide abil.
 
@@ -292,3 +305,4 @@ Minu Roll C analüüs keskendus `products`, `sales` ja `inventory` tabelitele. N
 
 Week 3 oli oluline samm üksikute tabelite analüüsimiselt seotud andmete põhjal terviklikuma ärianalüüsi koostamise suunas.
 
+</details>

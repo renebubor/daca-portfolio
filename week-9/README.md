@@ -1,5 +1,18 @@
 # Nädal 9 — Karjääri ettevalmistus ja värbamisjuhend
 
+**Äriküsimus:** Kuidas hinnata junior-analüütiku koostööd ja õppimisvõimet?
+
+**Minu panus:** Roll C: personalijuhi hindamiskriteeriumid ja hindamisleht.
+
+**Vaata väljundit:** [Personalijuhi vaade](individual/week9_HR_perspective.md)
+
+**Tulemus ja piirang:** Käitumisnäited, intervjuuküsimused ning rohelised ja punased lipud toetavad põhjendatud hindamist.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > Junior andmeanalüütiku hindamine tööandja vaatepunktist.
 
@@ -182,3 +195,5 @@ Minu Roll C keskendus kommunikatsioonile, probleemilahendusele, meeskonnatööle
 Töö tulemusena valmis personalijuhi osa meeskonna ühisesse värbamisjuhendisse koos hindamiskriteeriumide, intervjuuküsimuste, roheliste ja punaste lippude ning struktureeritud hindamislehega.
 
 Week 9 kõige olulisem õppetund oli, et **tööandja ei hinda ainult seda, mida kandidaat täna oskab, vaid ka seda, kuidas ta mõtleb, suhtleb, õpib ja teistega koostööd teeb**.
+
+</details>

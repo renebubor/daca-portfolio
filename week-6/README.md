@@ -1,5 +1,18 @@
 # Nädal 6 — Andmelugu ja Power BI dashboard'i viimistlemine
 
+**Äriküsimus:** Kas Pärnu kaupluse tulemus sõltub peamiselt suvest?
+
+**Minu panus:** Roll C: Pärnu dashboard ja andmelugu.
+
+**Vaata väljundit:** [Raporti PDF](individual/urbanstyle_dashboard_export.pdf) · [Juhtimiskokkuvõte](individual/week6_executive_summary.md)
+
+**Tulemus ja piirang:** Projektis dokumenteeritud leid: suvi annab ligikaudu 30% aastamüügist. Seega väärib tähelepanu ka hooajaväline müük. Ilmastiku mõju on hüpotees.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i asukohapõhiste dashboard'ide viimistlemine ja andmeloo jutustamine Power BI-s.
 
@@ -471,7 +484,7 @@ Minu individuaalne ülesanne oli **Roll C — Pärnu kaupluse dashboard ja narra
 
 ### Pärnu dashboard
 
-[`individual/week6_parnu_dashboard_screenshot.png`](individual/week6_parnu_dashboard_screenshot.png)
+[`individual/Dashboard_screenshot.png`](individual/Dashboard_screenshot.png)
 
 Ekraanipilt minu Pärnu dashboard'ist.
 
@@ -528,3 +541,5 @@ Minu individuaalne Roll C keskendus Pärnu kauplusele, kus analüüsi peamine te
 Annotatsioonide, KPI-de ja viitejoonte abil muutus dashboard lihtsast visualiseeringute kogumist ärilist konteksti selgitavaks analüüsiks.
 
 Week 6 kõige olulisem õppetund oli, et **andmeanalüütiku töö ei lõpe küsimusega „mida andmed näitavad?”, vaid jätkub küsimustega „miks see on oluline?” ja „mida peaksime nüüd tegema?”**.
+
+</details>

@@ -1,5 +1,18 @@
 # Nädal 5 — Visualiseerimise disain Power BI-s
 
+**Äriküsimus:** Kuidas muuta turundus- ja müügitulemused kiiresti loetavaks?
+
+**Minu panus:** Roll B: turundusdashboard; individuaalses Power BI failis ka teiste juhtimisvaadete läbimine.
+
+**Vaata väljundit:** [Power BI raport](individual/urbanstyle_week5_dashboard_all.pbix) · [Ekraanipilt](individual/Marketing_Dashboard.png)
+
+**Tulemus ja piirang:** KPI-d, filtrid ja visualiseeringud annavad ülevaate tulemustest. Näitajate tähendus sõltub valitud perioodist ja filtritest.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i andmete visualiseerimine erinevate stakeholder'ite vajaduste järgi.
 
@@ -390,3 +403,5 @@ Minu individuaalne Roll B keskendus turundusdashboard'ile, mille eesmärk oli n�
 Lisaks sisaldab minu Power BI raport Rollide A, C ja D vaateid, mistõttu moodustab fail terviklikuma UrbanStyle'i juhtimisraporti erinevate stakeholder'ite jaoks.
 
 Week 5 kõige olulisem õppetund oli, et visualiseerimise eesmärk ei ole lihtsalt muuta andmeid ilusaks, vaid **muuta analüüsi tulemus kiiresti mõistetavaks ja otsustamiseks kasutatavaks**.
+
+</details>

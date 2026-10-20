@@ -1,5 +1,18 @@
 # Nädal 4 — SQL agregatsioon
 
+**Äriküsimus:** Kuidas koostada müügi- ja turunduskanalite koondanalüüs?
+
+**Minu panus:** Roll A: müügi koondandmed; roll D: turunduskanalite analüüs.
+
+**Vaata väljundit:** [Müügianalüüs](individual/week4_sales_aggregation.sql) · [Turundusanalüüs](individual/week4_marketing_aggregation.sql)
+
+**Tulemus ja piirang:** CTE-d, agregatsioonid ja aknafunktsioonid. Kanali seostamine kliendiga ei tõenda kampaania põhjuslikku mõju müügile.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i müügi- ja turundusandmete koondanalüüs SQL agregatsioonide abil.
 
@@ -451,3 +464,5 @@ Roll A raames analüüsisin UrbanStyle'i müüki kuude ja tootekategooriate lõi
 Roll D raames ühendasin müügi-, kliendi- ja veebiliikluse andmed ning analüüsisin turunduskanalite efektiivsust klientide, tellimuste, käibe ja müügi kliendi kohta põhjal.
 
 Week 4 oli oluline samm SQL-i tehnilisest kasutamisest **juhtimisotsuseid toetava koondanalüüsi koostamise suunas**.
+
+</details>

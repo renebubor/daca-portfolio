@@ -1,5 +1,18 @@
 # Nädal 8 — Python API-d ja automatiseeritud andmepipeline
 
+**Äriküsimus:** Kuidas automatiseerida korduvat müügiandmete töötlemist?
+
+**Minu panus:** Meeskonnas roll B: transform.py; individuaalselt kõigi pipeline-etappide ühendamine.
+
+**Vaata väljundit:** [Transformatsioonid](individual/transform.py) · [Pipeline](individual/pipeline.py) · [KPI näidisväljund](../output/kpi_summary_20261008.html)
+
+**Tulemus ja piirang:** Modulaarne pärimine, puhastus, KPI-arvutus ja eksport. Tegelikku ajasäästu ega tootmiskeskkonna töökindlust pole siin mõõdetud.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i andmete automaatne pärimine, töötlemine, visualiseerimine ja eksport Python pipeline'i abil.
 
@@ -679,3 +692,5 @@ Minu grupitöö põhivastutus oli `transform.py`, mis puhastab ja valideerib and
 Individuaalselt tegin läbi kogu pipeline'i — alates Supabase API-st andmete pärimisest kuni visualiseerimise, ekspordi ja protsessi orkestreerimiseni. Lisaks rakendasin tootmisvalmidusele suunatud täiendusi, nagu pagination, veakäsitlus, retry-loogika, logimine ja konfiguratsiooni eraldamine.
 
 Week 8 kõige olulisem õppetund oli üleminek mõtteviisilt **„skript töötab”** mõtteviisile **„süsteem töötab usaldusväärselt ja korratavalt”**.
+
+</details>
