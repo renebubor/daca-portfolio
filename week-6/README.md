@@ -6,7 +6,35 @@
 
 **Vaata väljundit:** [Raporti PDF](individual/urbanstyle_dashboard_export.pdf) · [Juhtimiskokkuvõte](individual/week6_executive_summary.md)
 
-**Tulemus ja piirang:** Projektis dokumenteeritud leid: suvi annab ligikaudu 30% aastamüügist. Seega väärib tähelepanu ka hooajaväline müük. Ilmastiku mõju on hüpotees.
+**Tulemus ja piirang:** 2024. aastal kasvas tehingute arv käibest kiiremini ja AOV langes 4,6%. Varasemas andmeloos nimetatud suve 30% osakaal vajab eraldi kontrolli; ilmastiku mõju on hüpotees.
+
+## Tulemus ja periood
+
+![Pärnu müügiandmelugu](individual/Dashboard_screenshot.png)
+
+| Näitaja | Ekspordis kuvatud väärtus | Kontekst |
+|---|---:|---|
+| Kogukäive | 272 867 € | Kuvatav 2023.–2024. aasta koondvaade |
+| Tehingute arv | 992 | Sama koondvaade; tehingu täpne määratlus vajab mudeli kontrolli |
+| Keskmine tellimus | 275,07 € | Koondkäibe ja tehingute arvu suhe |
+| Käibe muutus | +4,3% | 2024 võrreldes 2023. aastaga |
+| Tehingute arvu muutus | +9,3% | 2024 võrreldes 2023. aastaga |
+| Keskmise tellimuse muutus | −4,6% | 2024 võrreldes 2023. aastaga |
+
+Need on PDF-is ja ekraanipildil nähtavad tulemused, mitte käesoleva ülevaatuse ajal algandmetest uuesti arvutatud näitajad. PBIX-i Pärnu lehel on asukohafilter Pärnu ja aastafilter enne 2025. aastat; graafik kuvab 2023. ja 2024. aastat. Käibe ja tehingute kasvumäärade suhe on ümardustäpsusega kooskõlas AOV langusega: 1,043 / 1,093 − 1 ≈ −4,6%.
+
+**Äriline järeldus:** tehingute arv kasvas käibest kiiremini. Järgmisena tasub uurida keskmise ostukorvi muutust tootevaliku, koguste, hindade ja allahindluste lõikes. Külastatavuse muutust ei saa tehingute arvust üksi järeldada.
+
+## Power BI-s tehtavad täpsustused
+
+1. Lisa koondkaartidele periood **2023–2024** ning säilita kasvukaartidel **2024 vs 2023**.
+2. Muuda annotatsioon „Igaaastane madalseis jaanuaris” kujule **Kuvatava perioodi madalaim kuukäive: jaanuar 2024**. Graafikul on 2023. aasta september jaanuarist madalam.
+3. Kinnita suve ligikaudu 30% osakaal eraldi mõõdikuga, aasta kaupa: juuni–augusti käive / sama aasta kogukäive. Praegune suve ja talve võrdlus üksi ei näita osakaalu kogu aastast.
+4. Märgi 15 000 € kuus viitejoone juurde, kas see on õppeülesande siht või kinnitatud eelarve. Rapordifail üksi ei tõenda sihi päritolu.
+5. Hoia ilmastiku võimalik mõju hüpoteesina; tõendamiseks on vaja ilmastiku- ja külastatavusandmeid.
+6. Selgita talve määratlust: kalendriaasta jaanuar, veebruar ja detsember ei moodusta üht järjestikust talvehooaega.
+
+Olemasoleva PBIX-i ja selle PDF-/pildiekspordi tekste ei ole selle dokumentatsioonimuudatusega muudetud. Ülaltoodu on nende järgmise viimistluse kontrollnimekiri.
 
 [Tagasi portfoolio avalehele](../README.md)
 
@@ -181,8 +209,8 @@ Diagrammile lisatud annotatsioonid aitavad olulisi perioode kiiresti märgata.
 
 Pärnu andmetes paistavad selgelt välja:
 
-- iga-aastane müügitipp augustis;
-- madalseis jaanuaris;
+- kuvatud aastate müügitipp augustis;
+- kuvatava perioodi madalseis jaanuaris 2024;
 - suveperioodi tugevam müük.
 
 Dashboard'is kasutasin lisaks viitejooni, mis võimaldavad tegelikku tulemust võrrelda eesmärgi ja keskmise müügitasemega.
@@ -195,9 +223,9 @@ Pärnu puhul oli peamine analüüsiteema hooajalisus.
 
 Analüüs näitas, et suvekuud on oluline müügiperiood, kuid Pärnu kauplus ei sõltu ainult suvest.
 
-Suvekuud moodustavad ligikaudu **30% aastamüügist**, samal ajal püsib müük arvestataval tasemel ka ülejäänud aasta jooksul.
+Varasema kokkuvõtte järgi moodustavad suvekuud ligikaudu **30% aastamüügist**; see hinnang vajab aasta kaupa mõõdikuga kinnitamist. Graafikul on müük olemas ka ülejäänud aasta jooksul.
 
-Kõige selgem müügitipp toimub augustis ning madalaim periood on jaanuar.
+Kuvataval graafikul on müügitipp augustis ning kogu perioodi madalaim kuukäive jaanuaris 2024.
 
 See tähendab, et Pärnu puhul on hooajalisus oluline, kuid kaupluse äriline potentsiaal ei piirdu ainult suvehooajaga.
 
@@ -209,7 +237,7 @@ Dashboard'i analüüsimisel oli oluline vaadata lisaks käibele ka tehingute arv
 
 2024. aasta analüüsis suurenes tehingute arv kiiremini kui käive.
 
-See viitab sellele, et suurem külastuste või ostude arv ei pruugi automaatselt tähendada samas tempos kasvavat käivet.
+See viitab sellele, et suurem ostude arv ei pruugi automaatselt tähendada samas tempos kasvavat käivet.
 
 Üks võimalik selgitus on väiksem keskmine ostukorv.
 
@@ -230,7 +258,7 @@ Annotatsiooni eesmärk ei ole lihtsalt korrata diagrammil olevat väärtust, vai
 Pärnu dashboard'is tõin näiteks välja:
 
 - iga-aastase müügitipu augustis;
-- jaanuari madalseisu;
+- jaanuari 2024 madalseisu;
 - nõrgema juunikuu võimaliku seose ilmastiku ja külastatavusega.
 
 Oluline on eristada andmetest kinnitatud tulemust ja hüpoteesi.
@@ -262,7 +290,7 @@ Viitejoon aitab kasutajal ühe pilguga mõista, kas tulemus on tavapärasest võ
 
 Pärnu müük on hooajaline, kuid mitte ainult suvest sõltuv.
 
-Suvekuud moodustavad ligikaudu 30% aastamüügist ning müük püsib arvestataval tasemel ka ülejäänud aasta jooksul. Selgeim madalseis on jaanuaris, samas kui augustis saavutatakse aasta tipp.
+Varasemas kokkuvõttes hinnati suve osakaaluks ligikaudu 30%; enne kasutamist tuleb see kinnitada aasta kaupa mõõdikuga. Müük toimub ka ülejäänud aasta jooksul. Kuvatava perioodi selgeim madalseis on jaanuaris 2024, samas kui augustis saavutatakse aasta tipp.
 
 2024. aastal kasvas tehingute arv kiiremini kui käive, mis viitab väiksema keskmise ostukorvi võimalikule mõjule.
 
@@ -536,7 +564,7 @@ AI aitas genereerida ja hinnata võimalikke selgitusi, kuid eristasin andmetest 
 
 Week 6 jooksul liikusin dashboard'i loomisest edasi andmeloo jutustamise juurde.
 
-Minu individuaalne Roll C keskendus Pärnu kauplusele, kus analüüsi peamine teema oli hooajalisus. Dashboard näitas augustikuist müügitippu, jaanuari madalseisu ning seda, et suvekuud moodustavad ligikaudu 30% aastamüügist.
+Minu individuaalne Roll C keskendus Pärnu kauplusele, kus analüüsi peamine teema oli hooajalisus. Dashboard näitas augustikuist müügitippu ja jaanuari 2024 madalseisu. Varasemas andmeloos nimetatud suve 30% osakaal vajab mõõdikuga kinnitamist.
 
 Annotatsioonide, KPI-de ja viitejoonte abil muutus dashboard lihtsast visualiseeringute kogumist ärilist konteksti selgitavaks analüüsiks.
 

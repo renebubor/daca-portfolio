@@ -1,32 +1,36 @@
-1. Setup / Conflict – mis on äriline küsimus?
+# Pärnu kaupluse müügiandmete juhtimiskokkuvõte
 
-Alustan nii:
-„Pärnu on UrbanStyle’i väikseim kauplus ja kuna tegemist on suvekuurordiga, võiks eeldada, et selle müük sõltub tugevalt suvehooajast. Küsimus on, kas suvine müük on piisavalt tugev, et kompenseerida nõrgemaid kuid, ja kas väljaspool suve jääb potentsiaali kasutamata.“
-Dashboardil näitan: pealkiri + KPI-d, ära veel detailidesse mine.
-See loob kohe konflikti:
-kas Pärnu on sisuliselt suvekauplus või on pilt keerulisem?
-________________________________________
-2. Data – mida andmed tegelikult näitavad?
+**Põhisõnum:** 2024. aastal kasvas tehingute arv käibest kiiremini ning keskmine tellimuse väärtus langes. Edasine analüüs peaks selgitama ostukorvi vähenemist ja nõrgemate kuude tulemusi.
 
-„Andmed näitavad, et suvi on küll tähtis, kuid moodustab umbes 30% kogu aasta müügist. Kõrgeim müük on augustis ja madalaim jaanuaris, kuid ka ülejäänud kuudel on müük täiesti arvestatav.“
+## Rapordis nähtavad tulemused
 
-Seejärel joondiagramm:
-„Müügitrendist on näha selge augustikuine tipp. Samas on suve sees ka nõrgem periood, mille võimalikuks põhjuseks võib olla vihmane suvi. Müügiandmetega ilmastiku mõju tõestada ei saa.“
+| Näitaja | Väärtus | Periood |
+|---|---:|---|
+| Kogukäive | 272 867 € | 2023–2024 koondvaade |
+| Tehingute arv | 992 | 2023–2024 koondvaade |
+| Keskmine tellimus | 275,07 € | 2023–2024 koondvaade |
+| Käibe muutus | +4,3% | 2024 vs 2023 |
+| Tehingute arvu muutus | +9,3% | 2024 vs 2023 |
+| Keskmise tellimuse muutus | −4,6% | 2024 vs 2023 |
 
-Siis KPI-d:
-„2024. aastal kasvas tehingute arv 9,3%, kuid käive ainult 4,3%. Samal ajal langes keskmine tellimus 4,6%. See tähendab, et ostusid tehakse rohkem, kuid ühe tehingu väärtus on väiksem.“
-________________________________________
-3. Resolution – mida sellest järeldada?
+Allikas on [Power BI raporti PDF](urbanstyle_dashboard_export.pdf), esimene leht. Näitajaid ei ole selle kokkuvõtte korrastamisel algandmetest uuesti arvutatud.
 
-Siin lahendan alguses püstitatud küsimuse.
-„Seega ei kinnita andmed päriselt oletust, et Pärnu oleks ainult suvest sõltuv kauplus. Suvi on küll tugevaim periood, kuid umbes 70% müügist tuleb väljaspool suve. Suurem probleem ei pruugi olla ainult hooajalisus, vaid ka keskmise ostukorvi vähenemine ning teatud kuude, eriti jaanuari, nõrgem tulemus.“
+Kuvataval kuutrendil on mõlema aasta müügitipp augustis. Perioodi madalaim kuukäive on jaanuaris 2024; 2023. aasta jaanuar ei ole selle aasta madalaim kuu. Seetõttu tuleb raporti annotatsiooni „iga-aastane madalseis jaanuaris” täpsustada.
 
-Siin ei sunni andmeid etteantud narratiivi sisse.
-________________________________________
-4. Action – mida juht peaks järgmisena tegema?
+## Tõlgendus ja piirangud
 
-„Edasise tegevusena soovitaksin uurida kolme asja: kas nõrgematel kuudel langeb eelkõige külastajate ja tehingute arv või keskmine ostukorv; kuidas muutuvad Pärnu andmed võrreldes teiste kauplustega; ning kas kohalik turundus, konkurents või tootevalik võivad nõrgemaid perioode mõjutada.“
+Tehingute arvu kasv koos AOV langusega põhjendab ostukorvi täiendavat uurimist. See ei tõenda külastajate arvu, konversiooni ega marginaali muutust.
 
-Lisaks üldiselt:
-„Fookus võiks olla nii suvehooaja maksimaalsel ärakasutamisel kui ka hooajavälise müügi tugevdamisel, eelkõige keskmise ostukorvi kasvatamise ja jaanuari madalseisu põhjuste analüüsi kaudu.“
+Varasemas andmeloos nimetatud suve ligikaudu 30% osakaal vajab kinnitamist mõõdikuga iga aasta kohta eraldi. Suve ja talve tulpade võrdlus ei näita veel osakaalu kogu aastast. Talve määratlus tuleb samuti täpsustada: sama kalendriaasta jaanuar, veebruar ja detsember ei ole üks järjestikune talvehooaeg.
 
+Vihmase juuni mõju on hüpotees. Müügiandmed üksi ei tõenda seost ilmastiku ja külastatavusega. Ka 15 000 € kuusiht on praegu raporti viitejoon; selle päritolu kinnitatud eelarvest ei ole siin tõendatud.
+
+## Soovitatav järgmine tegevus
+
+1. Võrdle 2024. ja 2023. aasta ostukorvi tootekategooriate, koguste, hindade ja allahindluste lõikes; lisa marginaal, kui kuluandmed on olemas.
+2. Võrdle jaanuari ja teiste nõrkade kuude tulemusi Tallinna ja Tartu kauplustega samadel perioodidel. Külastatavuse selgitamiseks lisa külastajate andmed.
+3. Arvuta suve käibeosakaal aasta kaupa ning kasuta kinnitatud tulemust hooajaliste varude ja turundustegevuste planeerimisel.
+
+Tegemist on UrbanStyle'i õppejuhtumi analüüsiga. Soovituste rakendamist ega saavutatud ärimõju pole mõõdetud.
+
+[Tagasi nädala ülevaatesse](../README.md)

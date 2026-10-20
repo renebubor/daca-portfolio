@@ -8,6 +8,29 @@
 
 **Tulemus ja piirang:** KPI-d, filtrid ja visualiseeringud annavad ülevaate tulemustest. Näitajate tähendus sõltub valitud perioodist ja filtritest.
 
+## Mida väljund näitab
+
+![Turundusvaate ekraanipilt](individual/Marketing_Dashboard.png)
+
+- Ekraanipildil on kliendiarvu kaart **3 150**, klientide registreerumise kuutrend ning müük kanalite ja asukohtade lõikes.
+- Müügikanal tähendab siin **poodi või e-poodi**, mitte reklaami- või turunduskanalit.
+- PBIX sisaldab viit lehte: **Kaart A, Kaart B, Kaart B +, Kaart C ja Kaart D**. Minu põhivaade on Kaart B; Kaart B + sisaldab täiendavat esimese ostu asukoha vaadet.
+
+## Tõlgendamise piirangud
+
+Kaart 3 150 ei tähenda automaatselt valitud perioodil ostnud klientide arvu. Enne võrdlemist tuleb eristada registreerunud kliente ja ostnud kliente ning kontrollida kuupäevafiltri mõju. Ekraanipildil olev `(Blank)` kuupäevakategooria vajab mudelis uurimist; seda ei tohi tõlgendada kalendrikuuna.
+
+Müügitulu ja registreerumised kirjeldavad mahtu. Kampaaniate tasuvuse, kliendi hankimise kulu või turunduskanali efektiivsuse hindamiseks on vaja kuluandmeid ning põhjendatud seost kliendi, kampaania ja ostu vahel.
+
+## Power BI-s tehtavad viimistlused
+
+1. Täpsusta lehe pealkiri kujule **UrbanStyle'i müügikanalid ja klientide lisandumine**.
+2. Asenda kaardi üldine nimetus „Kliente kokku” täpse mõõdiku nimetusega ja lisa periood.
+3. Uuri registreerumistrendi `(Blank)` kategooria põhjust: puuduvad kuupäevad või kuupäevatabeliga sobimatud väärtused. Dokumenteeri lahendus.
+4. Kontrolli mõlema „Näidik” valiku mõju diagrammidele ja telgede pealkirjadele.
+
+Need on ülevaatusel leitud paranduskohad; olemasolevat PBIX-i ega ekraanipilti ei ole selle dokumentatsioonimuudatusega muudetud.
+
 [Tagasi portfoolio avalehele](../README.md)
 
 <details>
@@ -116,7 +139,7 @@ Minu Week 5 põhiülesanne oli luua turundusjuhile Annale dashboard, mis aitaks 
 - millised müügikanalid annavad kõige rohkem müüki;
 - kuidas müük jaotub kanalite lõikes;
 - kuidas muutub klientide lisandumine ajas;
-- millised kanalid on kliendihankimise seisukohalt olulisemad.
+- kuidas kirjeldada klientide lisandumist, eristades seda turunduskanalile omistatud kliendihankimisest.
 
 Analüüsi aluseks olid järgmised andmetabelid:
 
