@@ -1,5 +1,18 @@
 # Nädal 1 — SQL põhitõed ja müügiandmete uurimine
 
+**Äriküsimus:** Mida sisaldavad müügiandmed ja millised kvaliteediküsimused vajavad uurimist?
+
+**Minu panus:** Müügitabeli esmane uurimine SQL-iga.
+
+**Vaata väljundit:** [SQL-päringud](individual/week1_sales_exploration.sql)
+
+**Tulemus ja piirang:** Dokumenteeritud ülevaade tehingutest, asukohtadest ja puuduvatest väärtustest. Puuduv asukoht vajab müügikanali konteksti.
+
+[Tagasi portfoolio avalehele](../README.md)
+
+<details>
+<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i müügiandmete uurimine SQL päringute abil.
 
@@ -199,3 +212,5 @@ Nädal 1 jooksul rakendasin SQL-i põhitõdesid UrbanStyle'i müügiandmete prak
 Analüüs andis esmase ülevaate `sales` tabeli mahust, struktuurist, tehingutest, müügikanalitest ja andmekvaliteedist. Lisaks SQL-i tehnilisele kasutamisele oli oluline tulemuste tõlgendamine ärikontekstis.
 
 Nädal 1 lõi aluse järgnevatele põhjalikumatele andmeanalüüsi ülesannetele, kus SQL päringuid saab kasutada keerukamate äriküsimuste lahendamiseks.
+
+</details>

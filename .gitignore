@@ -6,3 +6,10 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Kohalikud keskkonnad ja ajutised failid
+.venv/
+.env.*
+!.env.example
+.ipynb_checkpoints/
+*.log

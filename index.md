@@ -1,75 +1,62 @@
 ---
 layout: default
-title: DACA Portfolio
+title: Rene Bubõr — andmeanalüüsi portfoolio
 ---
 
-# DACA Portfolio
+# Rene Bubõr · DACA andmeanalüüsi portfoolio
 
-Tere tulemast minu andmeanalüütika õppeportfooliosse!
+**Finants- ja ärianalüüs | Excel · Power BI · SQL · Python**
 
-Siia koondan DACA programmi jooksul tehtud ülesanded, projektid ja õpitud tööriistad.
+Ühendan finantsanalüüsi ja juhtimisaruandluse kogemuse DACA programmis arendatud SQL-i ja Pythoni oskustega. Siin näitan, kuidas uurin andmekvaliteeti, koostan analüüse ning muudan korduva andmetöötluse korratavaks töövooks.
 
-## 📚 Õppenädalad
+UrbanStyle on DACA programmi õppejuhtum. Siinsed tulemused kirjeldavad õppeandmestikku; soovitused ei ole tõend tegelikus ettevõttes saavutatud ärimõjust.
 
-### Week 0 – Setup
-Arenduskeskkonna ja töövahendite seadistamine.
+## Alusta nendest töödest
 
-[Vaata Week 0 →](week-0/)
+| Töö | Äriküsimus ja väljund | Minu panus |
+|---|---|---|
+| [Pärnu kaupluse müügiandmelugu](week-6/README.md) | Kuidas esitada hooajalisust ja müügitulemusi juhtimisotsuste toetamiseks? Power BI vaade ja juhtimiskokkuvõte. | Asukohapõhine analüüs ja visualiseerimine. |
+| [Kliendiandmete laadimine ja RFM-analüüs](week-7/README.md) | Kuidas valmistada kliendi- ja müügiandmed ette ostukäitumise analüüsiks? CSV ja Supabase töövihikud. | Meeskonnas andmete laadimine ja puhastamine; individuaalselt kogu analüüsi läbimine. |
+| [Automatiseeritud analüüsipipeline](week-8/README.md) | Kuidas teha müügiandmete töötlemine ja raportite loomine korratavaks? Python, KPI-d ja ekspordid. | Meeskonnas transformatsioonid; individuaalselt kogu pipeline. |
+| [SQL andmekvaliteedi analüüs](week-2/README.md) | Kuidas leida ja kontrollitult parandada kliendiandmete probleeme? SQL-päringud ja puhastuslogi. | Kliendiandmete uurimine ning paranduste katsetamine. |
 
-### Week 1 – SQL Basics
-SQL ja andmebaasidega töötamine.
+### Power BI näidis
 
-[Vaata Week 1 →](week-1/)
+![UrbanStyle müügiandmelugu](week-6/individual/Dashboard_screenshot.png)
 
-### Week 2 - SQL Cleaning
-SQL puhastusoperatsioonide läbiviimine.
+[Vaata PDF-i](week-6/individual/urbanstyle_dashboard_export.pdf) · [Loe järeldusi](week-6/individual/week6_executive_summary.md)
 
-[Vaata Week 2 →](week-2/)
+## Tööd nädalate kaupa
 
-### Week 3 - SQL JOINs
-SQL andmete omavaheline sidumine.
+| Nädal | Teema |
+|---|---|
+| [0](week-0/README.md) | Töökeskkonna seadistamine |
+| [1](week-1/README.md) | Müügiandmete esmane uurimine SQL-iga |
+| [2](week-2/README.md) | Andmekvaliteet ja puhastamine |
+| [3](week-3/README.md) | Tabelite ühendamine ja laoanalüüs |
+| [4](week-4/README.md) | Agregatsioonid ja turundusanalüüs |
+| [5](week-5/README.md) | Power BI dashboard |
+| [6](week-6/README.md) | Andmelugu ja juhtimisvaade |
+| [7](week-7/README.md) | Python, pandas ja RFM |
+| [8](week-8/README.md) | API ja automatiseeritud pipeline |
+| [9](week-9/README.md) | Värbamisjuhend personalijuhi vaatest |
+| [10](week-10/README.md) | Tervikportfoolio korrastus ja esitluse ettevalmistus |
 
-[Vaata Week 3 →](week-3/)
+Iga nädala `individual/` sisaldab minu individuaalseid väljundeid. `team/` sisaldab meeskonnatöö konteksti ja viiteid ühisele tööle. Täpne vastutus on kirjeldatud vastava nädala README-s.
 
-### Week 4 - SQL Aggregation
-SQL andmete agregeerimine ja koondanalüüs.
+## Tööriistad
 
-[Vaata Week 4 →](week-4/)
+- **Excel ja Power BI:** juhtimisaruandlus, andmemudelid ja visualiseerimine.
+- **SQL ja PostgreSQL / Supabase:** andmete uurimine, ühendamine, puhastamine ja koondamine.
+- **Python:** pandas, API-päringud, Plotly ja modulaarne andmetöötlus.
+- **Git ja GitHub:** lähtekood, dokumentatsioon ja versioonihaldus.
 
-### Week 5 - Power BI Visualiseerimise disain
-Dashboard'ide, KPI-de ja sobivate diagrammide loomine erinevate stakeholder'ite vajaduste järgi.
+## Kuidas töid vaadata
 
-[Vaata Week 5 →](week-5/)
+Alusta README-st ja ekraanipiltidest; PDF-e saab vaadata ilma Power BI-ta. `.pbix` failid vajavad Power BI Desktopi. Python-tööde käivitamine eeldab sobivat keskkonda ning Supabase-tööde puhul enda ligipääsuandmeid. Täpsemad juhised on nädalate README-des.
 
-### Week 6 - Andmelugu ja dashboard'i viimistlemine
-Asukohapõhiste Power BI vaadete loomine, annotatsioonide ja viitejoonte lisamine ning andmetest ärilise narratiivi koostamine.
+## AI kasutamine
 
-[Vaata Week 6 →](week-6/)
+Kasutasin AI-d SQL-i ja Pythoni selgitamiseks, vigade leidmiseks ning dokumentatsiooni struktureerimiseks. Konkreetsem kasutus ja tulemuste kontrollimine on kirjeldatud vastavate nädalate README-des. AI soovituste sobivust tuleb hinnata lähtekoodi, andmete ja tegelike käivitustulemuste põhjal.
 
-### Week 7 - Python & Pandas
-Andmete laadimine, puhastamine ja analüüsimine Pythonis, RFM kliendisegmentide loomine ning tulemuste visualiseerimine Plotly abil.
-
-[Vaata Week 7 →](week-7/)
-
-### Week 8 - Python Data Pipeline
-Automatiseeritud andmepipeline'i loomine andmete laadimiseks, puhastamiseks, valideerimiseks ja eksportimiseks.
-
-[Vaata Week 8 →](week-8/)
-
-### Week 9 - Karjääri ettevalmistus
-Junior andmeanalüütiku värbamisjuhendi ja hindamiskriteeriumide koostamine tööandja vaatenurgast.
-
-[Vaata Week 9 →](week-9/)
-
-## Nädalapõhine õppeplaan
-
-| Nädal | Teema | Staatus |
-|-------|-------|---------|
-| 0 | Onboarding | Lõpetatud |
-| 1 | SQL Basics | Lõpetatud |
-| 2 | SQL Cleaning | Lõpetatud |
-| 3 | SQL JOINs | Lõpetatud |
-| 4 | SQL Aggregation | Lõpetatud |
-| 5-6 | Visualiseerimine | Lõpetatud |
-| 7-8 | Python | Lõpetatud |
-| 9-10 | Portfoolio + Karjäär | Käimas |
+[GitHubi profiil](https://github.com/renebubor)
