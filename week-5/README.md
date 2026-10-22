@@ -31,10 +31,10 @@ Müügitulu ja registreerumised kirjeldavad mahtu. Kampaaniate tasuvuse, kliendi
 
 Need on ülevaatusel leitud paranduskohad; olemasolevat PBIX-i ega ekraanipilti ei ole selle dokumentatsioonimuudatusega muudetud.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i andmete visualiseerimine erinevate stakeholder'ite vajaduste järgi.

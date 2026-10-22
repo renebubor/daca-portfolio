@@ -8,10 +8,10 @@
 
 **Tulemus ja piirang:** Modulaarne pärimine, puhastus, KPI-arvutus ja eksport. Tegelikku ajasäästu ega tootmiskeskkonna töökindlust pole siin mõõdetud.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i andmete automaatne pärimine, töötlemine, visualiseerimine ja eksport Python pipeline'i abil.

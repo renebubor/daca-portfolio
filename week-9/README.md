@@ -8,10 +8,10 @@
 
 **Tulemus ja piirang:** Käitumisnäited, intervjuuküsimused ning rohelised ja punased lipud toetavad põhjendatud hindamist.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > Junior andmeanalüütiku hindamine tööandja vaatepunktist.

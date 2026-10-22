@@ -36,10 +36,10 @@ Need on PDF-is ja ekraanipildil nähtavad tulemused, mitte käesoleva ülevaatus
 
 Olemasoleva PBIX-i ja selle PDF-/pildiekspordi tekste ei ole selle dokumentatsioonimuudatusega muudetud. Ülaltoodu on nende järgmise viimistluse kontrollnimekiri.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i asukohapõhiste dashboard'ide viimistlemine ja andmeloo jutustamine Power BI-s.

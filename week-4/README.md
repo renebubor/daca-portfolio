@@ -8,10 +8,10 @@
 
 **Tulemus ja piirang:** CTE-d, agregatsioonid ja aknafunktsioonid. Kanali seostamine kliendiga ei tõenda kampaania põhjuslikku mõju müügile.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i müügi- ja turundusandmete koondanalüüs SQL agregatsioonide abil.

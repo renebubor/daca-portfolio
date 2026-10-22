@@ -8,10 +8,10 @@
 
 **Tulemus ja piirang:** Dokumenteeritud ülevaade tehingutest, asukohtadest ja puuduvatest väärtustest. Puuduv asukoht vajab müügikanali konteksti.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i müügiandmete uurimine SQL päringute abil.

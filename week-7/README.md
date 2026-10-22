@@ -8,10 +8,10 @@
 
 **Tulemus ja piirang:** Laadimine, puhastus ja RFM-segmendid on koondatud töövihikutesse. Segmendid kirjeldavad ostukäitumist ega tõenda kampaaniate tulemuslikkust.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i kliendiandmete laadimine, puhastamine ja RFM-põhine kliendisegmenteerimine Python pandas abil.

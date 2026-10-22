@@ -8,10 +8,10 @@
 
 **Tulemus ja piirang:** Puhastusotsused on dokumenteeritud. Duplikaate tuleb määratleda ärilise võtme, mitte ainult nime põhjal.
 
-[Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details>
-<summary>Üksikasjalik töö kirjeldus ja õpitud võtted</summary>
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > UrbanStyle'i andmekvaliteedi uurimine ja andmete puhastamine SQL-i abil.
