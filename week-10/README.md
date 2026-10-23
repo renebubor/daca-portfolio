@@ -92,7 +92,7 @@ week-10/
 
 ### Individuaalne töö
 
-`individual/rene_esitlus.md`
+[`individual/rene_esitlus.md`](individual/rene_esitlus.md)
 
 Minu ettevalmistatud esinemistekst lõppesitluses:
 
