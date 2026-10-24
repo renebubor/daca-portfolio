@@ -9,7 +9,7 @@
 **Tulemus ja piirang:** Dokumenteeritud ülevaade tehingutest, asukohtadest ja puuduvatest väärtustest. Puuduv asukoht vajab müügikanali konteksti.
 
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>

@@ -9,7 +9,7 @@
 **Tulemus ja piirang:** Modulaarne pärimine, puhastus, KPI-arvutus ja eksport. Tegelikku ajasäästu ega tootmiskeskkonna töökindlust pole siin mõõdetud.
 
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>

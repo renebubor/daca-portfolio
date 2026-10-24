@@ -9,7 +9,7 @@
 **Tulemus ja piirang:** Puhastusotsused on dokumenteeritud. Duplikaate tuleb määratleda ärilise võtme, mitte ainult nime põhjal.
 
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>

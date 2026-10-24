@@ -9,7 +9,7 @@
 **Tulemus ja piirang:** Laadimine, puhastus ja RFM-segmendid on koondatud töövihikutesse. Segmendid kirjeldavad ostukäitumist ega tõenda kampaaniate tulemuslikkust.
 
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>

@@ -8,7 +8,7 @@
 
 **Peamine tulemus:** Soovitused kliendilojaalsuse arendamiseks, e-poe kasvu põhjuste uurimiseks ja neljanädalase aruandluspiloodi tegemiseks.
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>

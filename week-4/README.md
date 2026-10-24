@@ -9,7 +9,7 @@
 **Tulemus ja piirang:** CTE-d, agregatsioonid ja aknafunktsioonid. Kanali seostamine kliendiga ei tõenda kampaania põhjuslikku mõju müügile.
 
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>

@@ -9,7 +9,7 @@
 **Tulemus ja piirang:** Päringud toetavad müümata toodete, müügimahtude ja laoseisude uurimist. JOIN-i kardinaalsust tuleb kontrollida enne summade tõlgendamist.
 
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>

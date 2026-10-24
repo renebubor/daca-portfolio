@@ -16,7 +16,7 @@ Kogukäive, tehingute arv ja keskmine tellimus kajastavad Pärnu kaupluse 2023. 
 
 **Äriline järeldus:** tehingute arv kasvas käibest kiiremini. Järgmisena tasub uurida keskmise ostukorvi muutust tootevaliku, koguste, hindade ja allahindluste lõikes. Külastatavuse muutust ei saa tehingute arvust üksi järeldada.
 
-[🏠 Tagasi portfoolio avalehele](../README.md)
+[🏠 Tagasi portfoolio avalehele](../)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
