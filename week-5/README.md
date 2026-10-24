@@ -24,14 +24,13 @@
 
 **„Näidik” valik mõjutab kahte alumist graafikut** ning võimaldab vahetada müügi ja klientide arvu vaadet.
 
-Dashboard'i pealkiri on täpsustatud, kaardi nimetus muudetud ning liitunute graafiku alguses olnud tühi kuupäevakategooria eemaldatud.
 
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
-> **DACA — Andmeanalüütiku Karjäärikiirendi**  
+> **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i andmete visualiseerimine erinevate stakeholder'ite vajaduste järgi.
 
 ## Nädala eesmärk
@@ -368,7 +367,7 @@ Minu panus meeskonnatöösse oli:
 
 Week 5 meeskonnatöö lühikokkuvõte ja viide ühisele väljundile.
 
-**Meeskonna ühine töö:**  
+**Meeskonna ühine töö:**
 [`meeskonna töö viide week-5`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/89eba75c52d646af3e5ca5514d49fb4bfeab6967/week5)
 
 ---

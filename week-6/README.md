@@ -12,7 +12,7 @@
 
 ![Pärnu müügiandmelugu](individual/Dashboard_screenshot.png)
 
-Kogukäive, tehingute arv ja keskmine tellimus kajastavad Pärnu kaupluse 2023. ja 2024. aasta koondtulemust. Kasvunäitajad võrdlevad 2024. aastat 2023. aastaga. Periood 2023–2024 on lisatud dashboard'i pealkirja.
+Kogukäive, tehingute arv ja keskmine tellimus kajastavad Pärnu kaupluse 2023. ja 2024. aasta koondtulemust. Kasvunäitajad võrdlevad 2024. aastat 2023. aastaga.
 
 **Äriline järeldus:** tehingute arv kasvas käibest kiiremini. Järgmisena tasub uurida keskmise ostukorvi muutust tootevaliku, koguste, hindade ja allahindluste lõikes. Külastatavuse muutust ei saa tehingute arvust üksi järeldada.
 
