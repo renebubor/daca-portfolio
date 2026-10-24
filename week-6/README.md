@@ -12,15 +12,6 @@
 
 ![Pärnu müügiandmelugu](individual/Dashboard_screenshot.png)
 
-| Näitaja | Ekspordis kuvatud väärtus | Kontekst |
-|---|---:|---|
-| Kogukäive | 272 867 € | Pärnu, 2023–2024 kokku |
-| Tehingute arv | 992 | Pärnu, 2023–2024 kokku |
-| Keskmine tellimus | 275,07 € | Pärnu, 2023–2024; käibe ja tehingute arvu suhe |
-| Käibe muutus | +4,3% | 2024 võrreldes 2023. aastaga |
-| Tehingute arvu muutus | +9,3% | 2024 võrreldes 2023. aastaga |
-| Keskmise tellimuse muutus | −4,6% | 2024 võrreldes 2023. aastaga |
-
 Kogukäive, tehingute arv ja keskmine tellimus kajastavad Pärnu kaupluse 2023. ja 2024. aasta koondtulemust. Kasvunäitajad võrdlevad 2024. aastat 2023. aastaga. Periood 2023–2024 on lisatud dashboard'i pealkirja.
 
 **Äriline järeldus:** tehingute arv kasvas käibest kiiremini. Järgmisena tasub uurida keskmise ostukorvi muutust tootevaliku, koguste, hindade ja allahindluste lõikes. Külastatavuse muutust ei saa tehingute arvust üksi järeldada.
