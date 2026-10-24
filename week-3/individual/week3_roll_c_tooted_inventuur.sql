@@ -53,20 +53,23 @@ FROM products p
     LEFT JOIN inventory i ON p.product_id = i.product_id
 ORDER BY i.quantity_available ASC;
 -----
+-- Jaehinna ja koguse korrutis on jaehinnas väärtus, mitte soetusmaksumus.
 --Ühendan kolm tabelit: leian tooted, mis on laos, aga pole kunagi müüdud — topelt kahju (laoseis + müümata)
 SELECT p.product_name,
     p.category,
     p.retail_price,
     i.quantity_available,
-    (p.retail_price * i.quantity_available) AS kinni_olev_raha
+    (p.retail_price * i.quantity_available) AS laovaartus_jaehinnas
 FROM products p
     LEFT JOIN sales s ON p.product_id = s.product_id
     LEFT JOIN inventory i ON p.product_id = i.product_id
 WHERE s.sale_id IS NULL
     AND i.quantity_available > 0
-ORDER BY kinni_olev_raha DESC;
+ORDER BY laovaartus_jaehinnas DESC;
 --päring annab vastuseks, et andmed puuduvad
---Leian kui palju on raha laovarude all kinni: 44 212 904 EUR
+-- Laokoguste väärtus soetushinnas (varasemas väljavõttes 44 212 904 EUR).
+-- Summa hõlmab kõiki inventory ridu. Kui tabel sisaldab eri kuupäevade
+-- laoseise, tuleb jooksva laoväärtuse jaoks valida esmalt sobiv seisukuupäev.
 SELECT sum(p.cost_price * i.quantity_available) AS laovarude_maksumus
 FROM products p
     INNER JOIN inventory i ON p.product_id = i.product_id;

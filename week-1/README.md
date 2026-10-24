@@ -8,6 +8,12 @@
 
 **Tulemus ja piirang:** Dokumenteeritud ülevaade tehingutest, asukohtadest ja puuduvatest väärtustest. Puuduv asukoht vajab müügikanali konteksti.
 
+## Päringute kasutamine
+
+Ava [SQL-fail](individual/week1_sales_exploration.sql) Supabase SQL Editoris või PostgreSQL-ühendusega SQL-kliendis ning käivita soovitud SELECT-päring. Fail uurib puuduvat `customer_id` väärtust, müüki asukohtade lõikes ja puuduva asukoha seost müügikanaliga.
+
+README-s toodud arvud kirjeldavad esialgse õppeandmestiku uurimise tulemusi. Praeguse andmebaasi seis võib olla erinev. Negatiivne müügisumma või puuduv kaupluse asukoht vajab enne parandamist ärilise tähenduse selgitamist.
+
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details markdown="block">

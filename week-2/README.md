@@ -8,6 +8,14 @@
 
 **Tulemus ja piirang:** Puhastusotsused on dokumenteeritud. Duplikaate tuleb määratleda ärilise võtme, mitte ainult nime põhjal.
 
+## Puhastuse kasutamine
+
+[SQL-fail](individual/week2_customers_cleaning.sql) sisaldab nii kontrollpäringuid kui ka testtabeli loomist ja muutmist. Käivita etapid järjekorras, valitud päringutena: `customers_test` luuakse üks kord; hilisemad UPDATE- ja DELETE-käsud muudavad seda testkoopiat.
+
+Duplikaatide eemaldamine on siin e-posti põhine õppeülesande reegel: alles jääb väikseima `customer_id` väärtusega kirje. E-posti vorming ühtlustatakse hiljem, mistõttu on normaliseerimise järel mõistlik duplikaadikontrolli korrata.
+
+[Puhastuslogi](individual/cleaning_log.md) on varasem tööjälg. Selle kustutamisrea `rows_affected = 0` ei tõenda 130 rea kustutamist; 130 oli eelneva kontrollpäringu leitud eemaldamiskandidaatide arv. Ajaloolisi logiandmeid ei ole tagantjärele ümber kirjutatud.
+
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details markdown="block">

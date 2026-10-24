@@ -1,19 +1,25 @@
---web_logs andmete import ja kontroll
-SELECT COUNT(*)
-FROM web_logs --50 000 kirjet
-    --ROLL D: Turunduskampaaniate ROI
-    --1. Turunduskanalite koondandmed. Ühendan müügi, kliendid ja veebilogi kanalitega:
-SELECT w.source AS turunduskanal,
-    COUNT(DISTINCT c.customer_id) AS kliente,
-    COUNT(DISTINCT o.sale_id) AS tellimusi,
-    SUM(o.total_price) AS kogukäive,
-    ROUND(AVG(o.total_price), 2) AS keskmine_tellimus
-FROM sales o
-    JOIN customers c ON o.customer_id = c.customer_id
-    LEFT JOIN web_logs w ON c.customer_id = w.customer_id
-GROUP BY w.source
-ORDER BY kogukäive DESC;
---2. Kanali efektiivsus CTE-ga
+-- Roll D: müügi kirjeldav analüüs turunduskanalite lõikes.
+-- Päringud on lugemiseks. Kampaaniakulusid ei kasutata; ROI-d ei arvutata.
+
+-- 1. Veebilogi kirjete arv.
+SELECT COUNT(*) AS veebikylastusi
+FROM web_logs;
+
+-- 2. Kontroll: ühel kliendil võib olla mitu veebikülastust.
+-- Müügi otseühendus nende ridadega kordaks samu müügisummasid.
+-- COUNT(DISTINCT sale_id) ei parandaks sellise JOIN-i SUM(total_price) tulemust.
+SELECT customer_id,
+    COUNT(*) AS kylastusi
+FROM web_logs
+WHERE customer_id IS NOT NULL
+GROUP BY customer_id
+HAVING COUNT(*) > 1
+ORDER BY kylastusi DESC;
+
+-- 3. Valime kliendile ühe kanali: esimese teadaoleva allika külastusaja järgi.
+-- Sama külastusaja korral otsustab source tähestikuline järjekord.
+-- See on kirjeldav omistamisreegel kogu olemasoleva veebiajaloo põhjal,
+-- mitte tõend, et külastus toimus enne ostu või põhjustas ostu.
 WITH kliendi_kanal AS (
     SELECT customer_id,
         source AS turunduskanal
@@ -22,24 +28,33 @@ WITH kliendi_kanal AS (
                 source,
                 ROW_NUMBER() OVER (
                     PARTITION BY customer_id
-                    ORDER BY visit_date
+                    ORDER BY visit_date ASC NULLS LAST, source ASC
                 ) AS rn
             FROM web_logs
             WHERE source IS NOT NULL
-        ) x
+                AND customer_id IS NOT NULL
+        ) AS jarjestatud_kylastused
     WHERE rn = 1
 )
 SELECT kk.turunduskanal,
     COUNT(DISTINCT s.customer_id) AS kliente,
-    COUNT(s.sale_id) AS tellimusi,
-    SUM(s.total_price) AS kogukäive,
+    COUNT(s.sale_id) AS myygiridu,
+    SUM(s.total_price) AS kogukaive,
+    ROUND(AVG(s.total_price), 2) AS keskmine_myygirea_summa,
     ROUND(
         SUM(s.total_price) / NULLIF(COUNT(DISTINCT s.customer_id), 0),
         2
-    ) AS müük_per_klient
+    ) AS myyk_per_klient
 FROM sales s
     LEFT JOIN kliendi_kanal kk ON s.customer_id = kk.customer_id
 GROUP BY kk.turunduskanal
-ORDER BY kogukäive DESC;
---4.Esitlus juhatusele:
-/* Meie kõige efektiivsem kanal on kogukäibe järgi google_organic, mille keskmine tellimus on 1024,7 €.*/
+ORDER BY kogukaive DESC;
+
+-- NULL kanal tähendab, et müügireale ei leitud kliendi kaudu sobivat allikat.
+-- See grupp säilib LEFT JOIN-iga ja kuulub samuti kogukäibe kontrolli.
+-- myygiridu loendab sale_id väärtusi; see ei loenda invoice_id järgi arveid.
+-- myyk_per_klient on käive ühe ostnud kliendi kohta, mitte keskmine tellimus.
+-- Kanalite käivete summa peab kattuma alloleva lähteandmete kogukäibega.
+SELECT COUNT(sale_id) AS myygiridu,
+    SUM(total_price) AS kogukaive
+FROM sales;

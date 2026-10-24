@@ -1,3 +1,5 @@
+-- Käivita valitud päringuid etappide kaupa. CREATE TABLE eeldab, et
+-- customers_test veel ei eksisteeri; UPDATE ja DELETE muudavad testkoopiat.
 --ROLL: Kliendiandmete puhastaja (Customer Data Cleaner)
 --Ülesanne: Leida duplikaatsed e-mailid, puuduvad nimed ja ebajärjekindlad linnanimed customers tabelis. Luua test koopia, puhastada ja dokumenteerida.
 --Sisend: Tabel: customers (Supabase)
@@ -11,7 +13,7 @@ SELECT COUNT(*) AS ridade_arv
 FROM customers_test;
 SELECT COUNT(*) AS ridade_arv
 FROM customers;
---mõlema päringu tulemus 3 150 rida, seega on identsed
+-- Mõlemas tabelis 3150 rida: ridade arv kattub. See kontroll üksi ei tõesta sisu identsust.
 --2.Leida duplikaatsed e-mailid
 SELECT email,
     COUNT(*) AS koopiate_arv
@@ -29,7 +31,7 @@ FROM(
         WHERE email IS NOT NULL
         GROUP BY email
         HAVING COUNT(*) > 1
-    );
+    ) AS emaili_grupid;
 /*Kui tühjad väljad välistada siis jääb 128 e-maili, millel on lisaks 130 duplikaati. (e-maile ja nende duplikaate on kokku 258 kirjet). 
  kustutada tuleb 130 duplikaati.*/
 --eemaldamist vajavate e-mail ridade päring
@@ -41,7 +43,7 @@ FROM (
         WHERE email IS NOT NULL
         GROUP BY email
         HAVING COUNT(*) > 1
-    );
+    ) AS emaili_grupid;
 -- Eemaldame e-maili duplikaadid
 -- Alles jääb väikseima customer_id-ga rida
 DELETE FROM customers_test
