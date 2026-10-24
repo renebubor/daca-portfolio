@@ -12,24 +12,19 @@
 
 ![Turundusvaate ekraanipilt](individual/Marketing_Dashboard.png)
 
-- Ekraanipildil on kliendiarvu kaart **3 150**, klientide registreerumise kuutrend ning müük kanalite ja asukohtade lõikes.
-- Müügikanal tähendab siin **poodi või e-poodi**, mitte reklaami- või turunduskanalit.
+- Kaart **„Uusi kliente valitud perioodil”** ja liitunute kuutrend kasutavad tabeli `customers` liitumiskuupäeva `registration_date`.
+- Käive tuleb tabelist `sales` ja kajastab müügitehinguid.
+- Liitunute ja müügi graafikutel on ühine ajatelg. Klientide liitumist ja müüki arvestatakse kummagi andmeallika vastava kuupäeva järgi.
+- Müügikanal tähendab siin **poodi või e-poodi**.
 - PBIX sisaldab viit lehte: **Kaart A, Kaart B, Kaart B +, Kaart C ja Kaart D**. Minu põhivaade on Kaart B; Kaart B + sisaldab täiendavat esimese ostu asukoha vaadet.
 
-## Tõlgendamise piirangud
+## Filtrite kasutamine ja viimistlus
 
-Kaart 3 150 ei tähenda automaatselt valitud perioodil ostnud klientide arvu. Enne võrdlemist tuleb eristada registreerunud kliente ja ostnud kliente ning kontrollida kuupäevafiltri mõju. Ekraanipildil olev `(Blank)` kuupäevakategooria vajab mudelis uurimist; seda ei tohi tõlgendada kalendrikuuna.
+Ülal olevas aastavalikus saab aastaid sisse ja välja lülitada ning valida analüüsi ajavahemiku. Kaart „Uusi kliente valitud perioodil” näitab valitud ajavahemikul liitunud kliente.
 
-Müügitulu ja registreerumised kirjeldavad mahtu. Kampaaniate tasuvuse, kliendi hankimise kulu või turunduskanali efektiivsuse hindamiseks on vaja kuluandmeid ning põhjendatud seost kliendi, kampaania ja ostu vahel.
+**„Näidik” valik mõjutab kahte alumist graafikut** ning võimaldab vahetada müügi ja klientide arvu vaadet.
 
-## Power BI-s tehtavad viimistlused
-
-1. Täpsusta lehe pealkiri kujule **UrbanStyle'i müügikanalid ja klientide lisandumine**.
-2. Asenda kaardi üldine nimetus „Kliente kokku” täpse mõõdiku nimetusega ja lisa periood.
-3. Uuri registreerumistrendi `(Blank)` kategooria põhjust: puuduvad kuupäevad või kuupäevatabeliga sobimatud väärtused. Dokumenteeri lahendus.
-4. Kontrolli mõlema „Näidik” valiku mõju diagrammidele ja telgede pealkirjadele.
-
-Need on ülevaatusel leitud paranduskohad; olemasolevat PBIX-i ega ekraanipilti ei ole selle dokumentatsioonimuudatusega muudetud.
+Dashboard'i pealkiri on täpsustatud, kaardi nimetus muudetud ning liitunute graafiku alguses olnud tühi kuupäevakategooria eemaldatud.
 
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
@@ -150,33 +145,12 @@ Analüüsi aluseks olid järgmised andmetabelid:
 
 ## Turundusdashboard'i loogika
 
-```text
-           sales
-             │
-             ├── channel
-             ├── total_price
-             └── customer_id
-             │
-             ▼
-          customers
-             │
-             ├── registration_date
-             └── customer_id
-             │
-             ▼
-         Power BI mudel
-             │
-       ┌─────┴─────┐
-       ▼           ▼
- Müügikanalid   Kliendihankimine
-       │           │
-       ▼           ▼
- Tulpdiagramm   Ajatrend
-       │           │
-       └─────┬─────┘
-             ▼
-     Marketing Dashboard
-```
+| Vaade | Andmeallikas | Ajaline alus |
+|---|---|---|
+| Uute klientide kaart ja liitumistrend | `customers` | Liitumiskuupäev `registration_date` |
+| Käive müügikanalite ja asukohtade lõikes | `sales` | Müügitehingu kuupäev |
+
+Vaateid ühendab ajatelg. Aastavalik määrab vaadeldava perioodi; liitunute arv ja käive arvutatakse eraldi vastavatest tabelitest.
 
 ---
 
@@ -285,19 +259,9 @@ Eesmärk oli jätta dashboard'ile ainult otsustamiseks vajalik info.
 
 ## Interaktiivsus
 
-Power BI võimaldab staatilise raporti asemel luua interaktiivse analüüsikeskkonna.
+Perioodi saab valida dashboard'i ülaosas aastate kaupa, lülitades sobivad aastad sisse või välja.
 
-Dashboard'i kasutamisel saab andmeid filtreerida näiteks:
-
-- aasta;
-- kvartali;
-- kuu;
-- asukoha;
-- kategooria
-
-järgi.
-
-Slicerid ja visualiseeringute omavahelised seosed võimaldavad kasutajal vaadata sama analüüsi erinevate nurkade alt.
+„Näidik” valik muudab kahe alumise graafiku näitajat müügi ja klientide arvu vahel. Uute klientide kaart ning liitunute ajatrend kirjeldavad tabeli `customers` liitumisandmeid.
 
 ---
 
