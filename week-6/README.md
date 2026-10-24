@@ -38,7 +38,7 @@ Olemasoleva PBIX-i ja selle PDF-/pildiekspordi tekste ei ole selle dokumentatsio
 
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
-<details>
+<details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
