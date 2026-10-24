@@ -8,14 +8,6 @@
 
 **Tulemus ja piirang:** Päringud toetavad müümata toodete, müügimahtude ja laoseisude uurimist. JOIN-i kardinaalsust tuleb kontrollida enne summade tõlgendamist.
 
-## Näitajate tähendus
-
-[SQL-fail](individual/week3_roll_c_tooted_inventuur.sql) sisaldab lugemispäringuid müümata toodete, müügiridade ja laoseisu uurimiseks.
-
-- Müümata toode tähendab, et sellele ei leitud ühtegi vastet kasutatud `sales` tabelis.
-- `COUNT(sale_id)` näitab müügiridade arvu; müüdud ühikute jaoks tuleks summeerida `quantity`.
-- Jaehind × laokogus on **laoväärtus jaehinnas**. Soetusmaksumuse päring kasutab eraldi `cost_price` veergu.
-- Laoväärtuse summa hõlmab päringus kõiki inventuuriridu. Mitme seisukuupäevaga tabeli puhul tuleb jooksva seisu hindamiseks rakendada sobivat kuupäevavalikut.
 
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
@@ -282,7 +274,7 @@ week-3/
 
 ### Individuaalne töö
 
-[`individual/week3_roll_c_tooted_inventuur.sql`](individual/week3_roll_c_tooted_inventuur.sql)  
+[`individual/week3_roll_c_tooted_inventuur.sql`](individual/week3_roll_c_tooted_inventuur.sql)
 Minu Roll C SQL-päringud toodete, müügi ja inventuuri analüüsimiseks.
 
 Analüüsi tulemused:
@@ -298,7 +290,7 @@ Meeskonnatöö käigus ühendati erinevate rollide analüüsid terviklikumaks Ur
 
 Minu panus meeskonnatöösse oli **Roll C — toodete, müügi ja inventuuri analüüs**.
 
-[`team/week3.md`](team/week3.md)  
+[`team/week3.md`](team/week3.md)
 Week 3 meeskonnatöö kokkuvõte.
 
 **Meeskonna ühine töö:**

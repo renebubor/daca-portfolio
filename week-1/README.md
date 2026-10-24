@@ -8,18 +8,13 @@
 
 **Tulemus ja piirang:** Dokumenteeritud ülevaade tehingutest, asukohtadest ja puuduvatest väärtustest. Puuduv asukoht vajab müügikanali konteksti.
 
-## Päringute kasutamine
-
-Ava [SQL-fail](individual/week1_sales_exploration.sql) Supabase SQL Editoris või PostgreSQL-ühendusega SQL-kliendis ning käivita soovitud SELECT-päring. Fail uurib puuduvat `customer_id` väärtust, müüki asukohtade lõikes ja puuduva asukoha seost müügikanaliga.
-
-README-s toodud arvud kirjeldavad esialgse õppeandmestiku uurimise tulemusi. Praeguse andmebaasi seis võib olla erinev. Negatiivne müügisumma või puuduv kaupluse asukoht vajab enne parandamist ärilise tähenduse selgitamist.
 
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
-> **DACA — Andmeanalüütiku Karjäärikiirendi**  
+> **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i müügiandmete uurimine SQL päringute abil.
 
 ## Nädala eesmärk
@@ -188,13 +183,13 @@ week-1/
 
 ### Individuaalne töö
 
-[`individual/week1_sales_exploration.sql`](individual/week1_sales_exploration.sql)  
+[`individual/week1_sales_exploration.sql`](individual/week1_sales_exploration.sql)
 SQL päringud koos kommentaaridega, mida kasutasin `sales` tabeli uurimiseks.
 
-[`individual/asukoht_tehingud_päring.png`](individual/asukoht_tehingud_päring.png)  
+[`individual/asukoht_tehingud_päring.png`](individual/asukoht_tehingud_päring.png)
 Ekraanipilt SQL päringu tulemusest kus on poodide asukohad ja neis tehtavate tehingute arv.
 
-[`individual/Tln_müük.png`](individual/Tln_müük.png)  
+[`individual/Tln_müük.png`](individual/Tln_müük.png)
 Ekraanipilt SQL päringu tulemusest kus poe asukoht on Tallinn ja tehingu summa on suurem kui 100 eurot.
 
 ### Meeskonnatöö
@@ -203,10 +198,10 @@ Meeskonnatöö käigus ühendati erinevate UrbanStyle'i tabelite analüüside tu
 
 Minu panus meeskonnatöösse oli `sales` tabeli analüüs.
 
-[`team/week1_data_landscape.md`](team/week1_data_landscape.md)  
+[`team/week1_data_landscape.md`](team/week1_data_landscape.md)
 Kokkuvõte ja viide meeskonna ühisele Week-1 tööle.
 
-**Meeskonna ühine töö:**  
+**Meeskonna ühine töö:**
 [`meeskonna töö viide week-1`](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/a7baebb0cd97b02d736adce4ebacaac81554a3de/week%201)
 
 ---

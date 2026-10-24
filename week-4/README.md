@@ -8,22 +8,13 @@
 
 **Tulemus ja piirang:** CTE-d, agregatsioonid ja aknafunktsioonid. Kanali seostamine kliendiga ei tõenda kampaania põhjuslikku mõju müügile.
 
-## Päringute loogika
-
-[Müügianalüüs](individual/week4_sales_aggregation.sql) koondab kuud alates 01.01.2024; lõppkuupäeva pole määratud. `LAG()` võrdleb eelmise andmeid sisaldava tulemusreaga. Kui mõne kuu andmed puuduvad, ei ole üle lünga arvutatud muutus ühe kalendrikuu kasv. Puuduvad andmed ei tõenda nullmüüki.
-
-[Turundusanalüüs](individual/week4_marketing_aggregation.sql) valib iga kliendi kohta ühe kanali esimese teadaoleva veebiallika järgi. Seejärel ühendatakse kanal müügiga, nii et kliendi mitu veebikülastust ei kordaks müügisummasid. Kanali leidmiseta müük säilib eraldi NULL-grupis.
-
-**Müük kliendi kohta** ja **keskmine müügirea summa** on eraldi näitajad. Fail ei arvuta kampaania ROI-d ega tõenda turundustegevuse põhjuslikku mõju müügile. `COUNT(sale_id)` loendab müügiridu, mitte arveid `invoice_id` järgi.
-
-Kontrolli tulemusi enda PostgreSQL-andmebaasis. Selle korrastuse ajal ei ole varasemaid ärilisi tulemusnumbreid andmebaasist uuesti arvutatud.
 
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details markdown="block">
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
-> **DACA — Andmeanalüütiku Karjäärikiirendi**  
+> **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i müügi- ja turundusandmete koondanalüüs SQL agregatsioonide abil.
 
 ## Nädala eesmärk
@@ -446,13 +437,13 @@ Meeskonna analüüs hõlmas:
 
 Minu panus meeskonnatöösse oli:
 
-**Roll A — müügi koondandmed**  
+**Roll A — müügi koondandmed**
 **Roll D — turunduskanalite efektiivsus**
 
 ['team/week4.md'](team/week4.md)
 
-**Meeskonna ühine töö:** 
- 
+**Meeskonna ühine töö:**
+
 [`meeskonna töö viide week-4`](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/c6ffae8ae752bd09d54eefcaed7e21318712ded9/week4/teamwork.md)
 
 ---
