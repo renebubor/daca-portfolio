@@ -8,37 +8,6 @@
 
 **Tulemus ja piirang:** Modulaarne pärimine, puhastus, KPI-arvutus ja eksport. Tegelikku ajasäästu ega tootmiskeskkonna töökindlust pole siin mõõdetud.
 
-## Käivitamine
-
-Käivita järgmised käsud repositooriumi **juurkaustast**, aktiivses Python-virtuaalkeskkonnas:
-
-```bash
-python -m pip install -r week-8/requirements.txt
-python week-8/individual/pipeline.py
-```
-
-Virtuaalkeskkonna loomise ja aktiveerimise näide on [7. nädala juhendis](../week-7/README.md).
-
-Loo enne käivitamist juurkausta `.env` fail [näidisfaili](../.env.example) järgi. `data_fetcher.py` kasutab tabeleid **`sales`, `customers_py` ja `products`**. Ligipääsuõigused peavad lubama nende tabelite lugemist.
-
-[config.yaml](individual/config.yaml) määrab perioodi **01.01.2023–28.02.2025**, päringute korduskatsete seaded ning väljundkaustad. Skript leiab konfiguratsiooni enda kaustast; `output/` ja `logs/` on aga suhtelised käivitamise töökausta suhtes. Juurkaustast käivitades tekivad need repositooriumi juurkausta.
-
-Pipeline loob nädalased koondandmed CSV-na, käibegraafiku ja KPI-tabeli HTML-na, Exceli teavitusraporti ning logifaili. Tegemist on ühe käsuga käivitatava töövooga; automaatset ajastust pole repositooriumis seadistatud.
-
-## Näitajate tähendus
-
-- **Kogukäive:** puhastatud müügiandmete `total_price` summa.
-- **Unikaalsed kliendid:** puhastatud müügis esinevate erinevate `customer_id` väärtuste arv, mitte kogu klienditabeli suurus.
-- **Keskmine tellimus:** kogukäive jagatud unikaalsete `invoice_id` väärtuste arvuga.
-- **Nädalane väljund:** `sale_date`, `revenue`, `orders` ja `avg_order_value`. Nädalad lõpevad pühapäeval; kuupäev tähistab nädala lõppu ja võib viimase osalise nädala korral jääda päringuperioodi lõpust hilisemaks.
-
-## Kontrollitud loogika
-
-Puhastuse, nädalase koondi, KPI-de ja kliendiandmete ühendamise funktsioone kontrolliti eraldi kaasas olevate 7. nädala CSV-andmetega, rakendades enne puhastust 8. nädala perioodifiltrit. Nädalate käibe summa kattus KPI kogukäibega ning kliendiandmete ühendamine säilitas müügiridade arvu. Korduva `customer_id` võtmega klienditabel lükati `validate="m:1"` kontrolliga tagasi.
-
-7. ja 8. nädala tulemused ei pea kattuma: 7. nädal eemaldab duplikaadid enne perioodifiltrit, 8. nädal pärib esmalt valitud perioodi. Samuti kasutavad Supabase'i variandid erinevat müügitabelit. Ühesuguste arvude võrdlemiseks peavad allikas, periood ja sammude järjekord kattuma.
-
-Supabase'i ühendusega täiskäivitust ja uute väljundite eksporti selle ülevaatuse käigus ei tehtud. Olemasolevad `output/` failid on varasema käivituse näidisväljundid.
 
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
