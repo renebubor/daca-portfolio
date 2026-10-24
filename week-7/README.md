@@ -8,6 +8,57 @@
 
 **Tulemus ja piirang:** Laadimine, puhastus ja RFM-segmendid on koondatud töövihikutesse. Segmendid kirjeldavad ostukäitumist ega tõenda kampaaniate tulemuslikkust.
 
+## Kontrollitud CSV-tulemus
+
+Kaasas olevate CSV-failidega annab töövihiku arvutus järgmise tulemuse:
+
+- **8658** puhastatud müügirida ja **2526** analüüsis esindatud klienti;
+- analüüsiperiood **01.01.2023–28.02.2025**, RFM-i viitekuupäev **28.02.2025**;
+- **451 VIP Champions klienti**, kelle kogukulutus moodustab **42,84%** puhastatud andmete käibest.
+
+Arvutatud segmentide jaotus kattub kaasas oleva [rfm_segments.csv](individual/rfm_segments.csv) failiga. Need tulemused kirjeldavad CSV-varianti; Supabase'i tabelite muutumisel võivad tulemused erineda.
+
+## Käivitamine
+
+Alusta repositooriumi juurkaustast. Loo soovi korral eraldi virtuaalkeskkond ning paigalda selle nädala sõltuvused:
+
+```bash
+python -m venv .venv
+```
+
+Aktiveeri keskkond Windows PowerShellis:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+macOS-is või Linuxis:
+
+```bash
+source .venv/bin/activate
+```
+
+Seejärel:
+
+```bash
+python -m pip install -r week-7/requirements.txt
+cd week-7/individual
+python -m jupyterlab
+```
+
+Ava `week7_csv_rfm.ipynb`, vali selle keskkonna Python-kernel ning käivita lahtrid algusest lõpuni. Töökaust peab olema `week-7/individual`, sest töövihik loeb `sales.csv` ja `customers.csv` suhteliste failiteede kaudu. Viimane ekspordilahter kirjutab samas kaustas üle `rfm_segments.csv`.
+
+Supabase'i variandi jaoks loo repositooriumi juurkausta `.env` fail [näidisfaili](../.env.example) järgi. Ava `week7_supabase_rfm.ipynb`; selles kasutatakse tabeleid **`sales_py` ja `customers_py`**. CSV-variandi käivitamine ei vaja andmebaasiühendust.
+
+## Arvutusreeglid
+
+- Müügi- ja kliendiandmed ühendatakse `customer_id` järgi. Kaasas olevas kliendi-CSV-s on see võti unikaalne.
+- `invoice_id` järgi jäetakse alles esimene kirje; seejärel eemaldatakse kriitiliste puuduvate väärtustega read, teisendatakse kuupäevad, rakendatakse perioodipiir ja jäetakse alles positiivsed müügisummad.
+- RFM-i koguskoor on **R + F + M**, ilma Monetary lisakaaluta. Segmendid määratakse koguskoori järgi.
+- Segment „New Customers” on siin skoorivahemiku nimetus, mitte kliendi registreerumiskuupäeva kontroll. Sama kehtib riskisegmentide kohta: need on mudeli järgi määratud rühmad.
+
+CSV-töövoo arvutused kontrolliti kaasas olevate andmetega; Supabase'i päringuid ja Plotly graafikute kuvamist selle ülevaatuse käigus ei käivitatud.
+
 [🏠 Tagasi portfoolio avalehele](../README.md)
 
 <details markdown="block">
