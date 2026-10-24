@@ -13,7 +13,7 @@
 <details>
 <summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
 
-> **DACA — Andmeanalüütiku Karjäärikiirendi**  
+> **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle'i andmekvaliteedi uurimine ja andmete puhastamine SQL-i abil.
 
 ## Nädala eesmärk
@@ -296,7 +296,7 @@ week-2/
 
 ### Individuaalne töö
 
-[`individual/week2_customers_cleaning.sql'](individual/week2_customers_cleaning.sql)  
+[`individual/week2_customers_cleaning.sql`](individual/week2_customers_cleaning.sql)
 SQL päringud koos kommentaaridega, mida kasutasin andmekvaliteedi uurimiseks ja andmete puhastamiseks.
 
 ### Meeskonnatöö
@@ -305,10 +305,10 @@ Meeskonnatöö käigus ühendati individuaalsete analüüside tulemused ning koo
 
 Minu individuaalse analüüsi tulemused olid sisendiks meeskonna ühisele tööle.
 
-[`team/week2_team_cleaning_report.md'](team/week2_team_cleaning_report.md)  
+[`team/week2_team_cleaning_report.md`](team/week2_team_cleaning_report.md)
 Kokkuvõte ja viide meeskonna ühisele Week 2 tööle.
 
-**Meeskonna ühine töö:**  
+**Meeskonna ühine töö:**
 [`meeskonna töö viide week-2`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/9eaa9b8820ee04cffe97bdfdcb1c90c8220ad10a/week2)
 
 ---
