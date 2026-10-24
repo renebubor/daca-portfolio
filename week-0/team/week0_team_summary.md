@@ -14,4 +14,6 @@ Meeskond seadistas:
 Minu roll oli C – NotebookLM Seadistaja.
 
 ## Meeskonna ühine töö
-https://github.com/laura-johanson/urbanstyle-marketing-data/blob/f0f614533c8ed373a3f82aa2332dfdbc6509f5e0/week%200
+https://github.com/laura-johanson/urbanstyle-marketing-data/tree/f0f614533c8ed373a3f82aa2332dfdbc6509f5e0/week%200
+
+[🏠 Tagasi nädala ülevaatesse](../README.md)

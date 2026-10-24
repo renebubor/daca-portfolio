@@ -1,5 +1,18 @@
 # Nädal 10 — Portfoolio lõppesitlus
 
+**Äriküsimus:** Milliseid juhtimisotsuseid toetavad UrbanStyle'i analüüsitulemused?
+
+**Minu panus:** Lõppesitluse osa 1 — sissejuhatus ja meeskonna missioon; osa 4 — kolm soovitust juhatusele.
+
+**Vaata väljundit:** [Minu esinemistekst](individual/rene_esitlus.md) · [Meeskonnatöö kokkuvõte](team/week10_team_presentation.md) · [Meeskonna PowerPoint-esitlus](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/1e184b0dc926b28b435745a24113cb0c5584f874/week10/UrbanStyle_Marketing_Data_loppesitlus.pptx)
+
+**Peamine tulemus:** Soovitused kliendilojaalsuse arendamiseks, e-poe kasvu põhjuste uurimiseks ja neljanädalase aruandluspiloodi tegemiseks.
+
+[🏠 Tagasi portfoolio avalehele](../README.md)
+
+<details markdown="block">
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**
 > UrbanStyle Marketing Data meeskonna 10 nädala töö kokkuvõte ja äriliste soovituste esitamine.
 
@@ -101,13 +114,21 @@ Minu ettevalmistatud esinemistekst lõppesitluses:
 
 ---
 
-## Meeskonnatöö
+## Ühine lõppesitlus
 
 Meeskonna ühise töö tulemus oli **7-minutiline UrbanStyle Marketing Data lõppesitlus**, mis koondas 10 nädala jooksul tehtud analüüsi, visualiseeringud, ärilised järeldused ja AI kasutamise kogemuse.
 
 
 **Meeskonna ühine töö:**
 [`meeskonna töö viide week-10`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/1e184b0dc926b28b435745a24113cb0c5584f874/week10)
+
+---
+
+## AI kasutamine
+
+AI aitas esitluse teksti ja kujundusvariante ette valmistada ning portfoolio dokumentatsiooni struktureerida. Meeskonna lõppesitluses on AI kasutamine koondatud eraldi slaidile: SQL-päringute ja Pythoni koodi selgitamine ning vigade leidmine, analüüsi tõlgendamine ja esitluse struktureerimine.
+
+Meeskond vastutas lõplike arvutuste, järelduste ja soovituste eest.
 
 ---
 
@@ -124,3 +145,5 @@ Esitluse kolm peamist tegevussuunda olid:
 Week 10 lõpetas programmi põhimõttega:
 
 **andmed → analüüs → järeldus → soovitus → otsus.**
+
+</details>

@@ -1,5 +1,18 @@
 # Nädal 0 — Andmeanalüüsi töökeskkonna seadistamine
 
+**Eesmärk:** Valmistada ette ühine töökeskkond SQL-i, Pythoni ja andmeanalüüsi projektide jaoks.
+
+**Minu panus:** Arenduskeskkonna seadistamine; meeskonnas roll C — NotebookLM-i seadistamine ja õppematerjalide lisamine.
+
+**Vaata väljundit:** [Seadistamise ekraanipilt](individual/setup_screenshot.png) · [Meeskonnatöö kokkuvõte](team/week0_team_summary.md) · [Power BI seadistusharjutus](individual/week-0-test-dashboard.pbix)
+
+**Peamine tulemus:** Loodud tehniline alus järgnevatele analüüsidele ja meeskonna allikapõhisele õppimisele.
+
+[🏠 Tagasi portfoolio avalehele](../README.md)
+
+<details markdown="block">
+<summary><strong>📖 Ava töö üksikasjalik kirjeldus ja õpitud võtted — klõpsa siin</strong></summary>
+
 > **DACA — Andmeanalüütiku Karjäärikiirendi**  
 > Arenduskeskkonna seadistamine, tööriistade liidestamine ja meeskonna onboarding.
 
@@ -96,8 +109,8 @@ daca-portfolio/
 
 ```bash
 git status
-git add
-git commit
+git add week-0/README.md
+git commit -m "docs: uuenda töökeskkonna kirjeldust"
 git push
 ```
 
@@ -250,7 +263,7 @@ Lokaalne arendus
 Avaldatud projekt
 ```
 
-GitHubi ja Verceli ühendamine võimaldab tulevikus viia analüüsiprojekti lokaalsest arenduskeskkonnast avalikult ligipääsetava veebilahenduseni.
+Verceli ühendamine oli osa algsest kavandatud töövoost. Käesolev portfoolio on avaldatud ka [GitHub Pagesis](https://renebubor.github.io/daca-portfolio/).
 
 ---
 
@@ -299,7 +312,8 @@ week-0/
 ├── README.md
 │
 ├── individual/
-│   └── setup_screenshot.png
+│   ├── setup_screenshot.png
+│   └── week-0-test-dashboard.pbix
 │
 └── team/
     └── week0_team_summary.md
@@ -310,10 +324,12 @@ week-0/
 [`individual/setup_screenshot.png`](individual/setup_screenshot.png) 
 Week 0 keskkonna seadistamise ekraanipilt.
 
+[`individual/week-0-test-dashboard.pbix`](individual/week-0-test-dashboard.pbix)
+
+Power BI seadistamise harjutusfail.
+
 ### Meeskonnatöö
 
-[`meeskonna töö viide week-0`](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/f0f614533c8ed373a3f82aa2332dfdbc6509f5e0/week%200)
+[`meeskonna töö viide week-0`](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/f0f614533c8ed373a3f82aa2332dfdbc6509f5e0/week%200)
 
-
- 
-
+</details>

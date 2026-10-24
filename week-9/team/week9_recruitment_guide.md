@@ -23,3 +23,5 @@ Meeskonna lõpptulemuseks valmis kokkuvõtlik junior andmeanalüütiku värbamis
 
 **Meeskonna ühine töö:**
 ['Vaata koondpilti'](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/7ffc2d3b6a39bf3ef240792d72cfbf19e08f5f18/week9/V%C3%A4rbamisjuhend%20junior-andmeanal%C3%BC%C3%BCtikule.png)
+
+[🏠 Tagasi nädala ülevaatesse](../README.md)

@@ -109,6 +109,7 @@ Onboarding peab ise neid oskusi toetama.
 **Punased lipud**
 
 - ❌ Jätab takistused pikaks ajaks märkamata või neist teatamata.
+- ❌ Tegutseb ebaselgete nõuete korral oletuste järgi ega täpsusta ootusi või kooskõlasta muudatusi.
 
 ---
 
@@ -173,7 +174,9 @@ Paluda kirjeldada olukorda, enda tegevust, tulemust ja õppetundi.
 **Skaala**
 
 - **1** = tõend puudub või on nõrk
+- **2** = näide on osaline; enda tegevus või tulemus jääb ebaselgeks
 - **3** = piisav konkreetne näide
+- **4** = selge näide koos põhjendatud tegevuse, tulemuse ja õppetunniga
 - **5** = väga tugev ja läbimõeldud näide
 
 Puuduva info korral esita täpsustav küsimus.
@@ -207,3 +210,5 @@ _____________________________________________________________________
 - Tuleb võrrelda hinnanguid samade kriteeriumide alusel ning dokumenteerida tugevused ja riskid.
 - Juunior-kandidaadi puhul hinnata lisaks olemasolevale tasemele õppimisvõimet ning abi küsimise oskust.
 - Hindamise koondhinne toetab arutelu, kuid ei asenda põhjendatud otsust.
+
+[🏠 Tagasi nädala ülevaatesse](../README.md)

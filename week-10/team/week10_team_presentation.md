@@ -30,3 +30,7 @@ Meeskonna lõpptulemuseks valmis 7-minutiline PowerPoint esitlus, mis koondas 10
 
 **Meeskonna GitHub:**
 [Vaata Week 10 ühist tööd](https://github.com/laura-johanson/urbanstyle-marketing-data/tree/1e184b0dc926b28b435745a24113cb0c5584f874/week10)
+
+[Vaata PowerPoint-esitlust](https://github.com/laura-johanson/urbanstyle-marketing-data/blob/1e184b0dc926b28b435745a24113cb0c5584f874/week10/UrbanStyle_Marketing_Data_loppesitlus.pptx)
+
+[🏠 Tagasi nädala ülevaatesse](../README.md)
